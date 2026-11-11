@@ -1,0 +1,3300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhirik Chips — Crunchy Banana Snack from Assam</title>
+<meta name="description" content="Dhirik Chips - crunchy banana chips made with banana, refined oil, and plain salt. Available at Raha College, Raha, Nagaon, Assam.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+/* ============================================
+   DHIRIK CHIPS — DESIGN SYSTEM (DARKER PALETTE)
+   ============================================ */
+:root {
+  /* Deep warm dark backgrounds */
+  --bg-dark: #1A1410;
+  --bg-dark-2: #261D17;
+  --bg-dark-3: #2F241C;
+  --bg-cream: #F5EEE3;
+  --bg-soft: #FAF5EC;
+  --bg-white: #FFFFFF;
+  --bg-card: #FFFFFF;
+
+  /* Banana tones (richer, darker gold) */
+  --color-banana: #D9A91A;
+  --color-banana-light: #E8C04A;
+  --color-banana-dark: #8B6914;
+  --color-banana-deep: #6B4F0E;
+
+  /* Deep forest green (primary actions) */
+  --color-forest: #1F4D33;
+  --color-forest-light: #2D6B47;
+  --color-forest-dark: #143A26;
+
+  /* Deep burgundy (highlights) */
+  --color-burgundy: #5C1A28;
+  --color-burgundy-light: #7A2538;
+
+  /* Text */
+  --color-text: #1A1410;
+  --color-text-muted: #6B5D50;
+  --color-text-dim: #9C8E80;
+  --color-text-light: #F5EEE3;
+  --color-text-light-dim: #B0A095;
+
+  /* Borders & lines */
+  --color-border: #E0D5C5;
+  --color-border-dark: #3D322A;
+  --color-border-soft: #EFE7D8;
+
+  /* Status */
+  --color-error: #A02020;
+  --color-error-bg: #FCF0F0;
+  --color-success: #1B6B3A;
+  --color-success-bg: #EFF7F1;
+  --color-warning: #9A6800;
+  --color-warning-bg: #FBF3E0;
+  --color-info: #1B4A6B;
+  --color-info-bg: #EAF2F8;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(26,20,16,0.06);
+  --shadow-sm: 0 2px 8px rgba(26,20,16,0.08);
+  --shadow-md: 0 6px 18px rgba(26,20,16,0.12);
+  --shadow-lg: 0 14px 40px rgba(26,20,16,0.18);
+  --shadow-dark: 0 8px 30px rgba(0,0,0,0.35);
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Type */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --transition-fast: 150ms ease;
+  --transition: 220ms ease;
+  --transition-slow: 400ms ease;
+
+  --container-max: 1080px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--bg-cream);
+  overflow-x: hidden;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+a { color: var(--color-forest); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--color-forest-light); }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+input, select, textarea { font-family: inherit; font-size: 16px; }
+
+.hidden { display: none !important; }
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-banana-dark);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+section { padding: var(--space-16) 0; }
+
+.section-dark { background: var(--bg-dark); color: var(--color-text-light); }
+.section-dark h1, .section-dark h2, .section-dark h3 { color: var(--color-text-light); }
+.section-dark .eyebrow { color: var(--color-banana-light); }
+
+.section-cream { background: var(--bg-cream); }
+.section-soft { background: var(--bg-soft); }
+
+.section-header { text-align: center; margin-bottom: var(--space-12); }
+.section-header h2 { font-size: clamp(28px, 5vw, 44px); margin-top: var(--space-3); }
+.section-header p { color: var(--color-text-muted); margin-top: var(--space-4); max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* ============================================
+   HEADER & NAV
+   ============================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26,20,16,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(217,169,26,0.15);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-light);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+.brand:hover { color: var(--color-banana-light); }
+.brand-mark { width: 32px; height: 32px; }
+
+.nav { display: flex; align-items: center; gap: 2px; }
+.nav a {
+  color: var(--color-text-light-dim);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+.nav a:hover { color: var(--color-text-light); background: rgba(217,169,26,0.08); }
+.nav a.active { color: var(--color-banana-light); }
+
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  color: var(--color-text-light);
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle svg { width: 24px; height: 24px; }
+
+@media (max-width: 820px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: var(--bg-dark);
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--color-border-dark);
+    box-shadow: var(--shadow-dark);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 14px 16px; border-radius: var(--radius-sm); }
+  .nav-toggle { display: flex; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, #1A1410 0%, #261D17 45%, #2F241C 100%);
+  color: var(--color-text-light);
+  padding: var(--space-20) 0 var(--space-20);
+  overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(217,169,26,0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(31,77,51,0.18) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+.hero-content { max-width: 540px; }
+.hero .eyebrow { color: var(--color-banana-light); }
+.hero h1 {
+  font-size: clamp(38px, 6vw, 64px);
+  margin-top: var(--space-4);
+  color: var(--color-text-light);
+}
+.hero h1 .accent { color: var(--color-banana); font-style: italic; }
+.hero-sub {
+  margin-top: var(--space-6);
+  font-size: 17px;
+  color: var(--color-text-light-dim);
+  line-height: 1.7;
+}
+.hero-actions { margin-top: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.hero-meta {
+  margin-top: var(--space-10);
+  display: flex;
+  gap: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(217,169,26,0.18);
+}
+.hero-meta div { display: flex; flex-direction: column; }
+.hero-meta .label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-light-dim); }
+.hero-meta .value { font-family: var(--font-display); font-size: 20px; color: var(--color-banana-light); margin-top: 4px; }
+
+/* Hero visual: transparent plastic pack with chips */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating bananas */
+.floating-banana {
+  position: absolute;
+  width: 70px;
+  opacity: 0.9;
+  animation: floatBanana 7s ease-in-out infinite;
+}
+.floating-banana.b1 { top: 5%; left: 0; animation-delay: 0s; }
+.floating-banana.b2 { top: 15%; right: -10px; width: 50px; animation-delay: 1.5s; }
+.floating-banana.b3 { bottom: 20%; left: -15px; width: 55px; animation-delay: 3s; }
+.floating-banana.b4 { bottom: 8%; right: 5%; width: 60px; animation-delay: 2s; }
+
+@keyframes floatBanana {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(-22px) rotate(6deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-banana { animation: none; }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  min-height: 44px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-align: center;
+}
+.btn-primary { background: var(--color-forest); color: var(--color-text-light); }
+.btn-primary:hover { background: var(--color-forest-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-banana { background: var(--color-banana); color: var(--bg-dark); }
+.btn-banana:hover { background: var(--color-banana-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-outline { background: transparent; color: var(--color-text-light); border-color: rgba(245,238,227,0.35); }
+.btn-outline:hover { border-color: var(--color-banana); color: var(--color-banana-light); }
+.btn-dark { background: var(--bg-dark); color: var(--color-text-light); }
+.btn-dark:hover { background: var(--bg-dark-2); }
+.btn-ghost { background: transparent; color: var(--color-text); border-color: var(--color-border); }
+.btn-ghost:hover { background: var(--bg-soft); border-color: var(--color-text-muted); }
+.btn-danger { background: var(--color-error); color: white; }
+.btn-danger:hover { background: #8A1818; }
+.btn-sm { padding: 8px 14px; font-size: 13px; min-height: 36px; }
+.btn-block { display: flex; width: 100%; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none !important; }
+
+/* WhatsApp button */
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+.btn-whatsapp:hover { background: #1FB455; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 90;
+  transition: all var(--transition);
+}
+.whatsapp-fab:hover { transform: scale(1.08); background: #1FB455; }
+.whatsapp-fab svg { width: 30px; height: 30px; }
+.whatsapp-fab::after {
+  content: 'Chat with us';
+  position: absolute;
+  right: 64px;
+  background: var(--bg-dark);
+  color: var(--color-text-light);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.whatsapp-fab:hover::after { opacity: 1; }
+
+/* ============================================
+   PRODUCT SECTION
+   ============================================ */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+.product-visual {
+  position: relative;
+  background: linear-gradient(155deg, #F5EEE3 0%, #E8DDC8 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+  overflow: hidden;
+}
+.product-visual::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(217,169,26,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.pack-svg { max-width: 280px; width: 100%; position: relative; z-index: 1; filter: drop-shadow(0 20px 40px rgba(139,105,20,0.25)); }
+
+.product-info h2 { font-size: clamp(28px, 4vw, 40px); }
+.product-info .eyebrow { color: var(--color-banana-dark); }
+.product-info > p { margin-top: var(--space-5); color: var(--color-text-muted); font-size: 16px; }
+
+.ingredients {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.ingredient-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.ingredient-chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-banana); }
+
+.price-row {
+  margin-top: var(--space-8);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+.price-row .price { font-family: var(--font-display); font-size: 44px; color: var(--color-forest); font-weight: 700; }
+.price-row .unit { color: var(--color-text-muted); font-size: 15px; }
+
+.packaging-note {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  background: var(--bg-soft);
+  border-left: 3px solid var(--color-banana);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+.packaging-note strong { color: var(--color-text); }
+
+.price-breakdown {
+  margin-top: var(--space-8);
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.price-breakdown h4 {
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-dark);
+  color: var(--color-text-light);
+  font-size: 14px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.breakdown-table { width: 100%; }
+.breakdown-table tr { border-bottom: 1px solid var(--color-border-soft); }
+.breakdown-table tr:last-child { border-bottom: none; background: var(--bg-soft); font-weight: 600; }
+.breakdown-table td { padding: 12px var(--space-5); font-size: 14px; }
+.breakdown-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ============================================
+   ORDER FORM
+   ============================================ */
+.order-wrap { max-width: 720px; margin: 0 auto; }
+.order-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.order-card-header {
+  padding: var(--space-6) var(--space-8);
+  background: var(--bg-dark);
+  color: var(--color-text-light);
+}
+.order-card-header h3 { color: var(--color-text-light); font-size: 22px; }
+.order-card-header p { color: var(--color-text-light-dim); font-size: 14px; margin-top: 4px; }
+
+.order-form { padding: var(--space-8); }
+.form-group { margin-bottom: var(--space-5); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+.form-group label .req { color: var(--color-error); }
+.form-group .hint { font-size: 12px; color: var(--color-text-dim); margin-top: 4px; }
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-white);
+  color: var(--color-text);
+  font-size: 15px;
+  transition: all var(--transition-fast);
+  min-height: 44px;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 3px rgba(31,77,51,0.12);
+}
+.form-control.error { border-color: var(--color-error); background: var(--color-error-bg); }
+.form-control:disabled { background: var(--bg-soft); color: var(--color-text-dim); }
+
+.form-error { font-size: 13px; color: var(--color-error); margin-top: 4px; display: none; }
+.form-error.show { display: block; }
+
+.field-readonly {
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.field-readonly .lock { margin-right: 8px; color: var(--color-text-dim); }
+
+/* Quantity selector */
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  max-width: 200px;
+  background: var(--bg-white);
+}
+.qty-btn {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-soft);
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 600;
+  transition: background var(--transition-fast);
+}
+.qty-btn:hover { background: var(--bg-cream); }
+.qty-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.qty-input {
+  flex: 1;
+  text-align: center;
+  border: none;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+  width: 60px;
+}
+.qty-input:focus { outline: none; }
+
+/* Order summary */
+.order-summary {
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+}
+.order-summary h4 { font-family: var(--font-body); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: var(--space-3); }
+.summary-line { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; }
+.summary-line.total { border-top: 1px dashed var(--color-border); margin-top: 6px; padding-top: 12px; font-weight: 700; font-size: 17px; color: var(--color-text); }
+.summary-line.total .amt { color: var(--color-forest); font-family: var(--font-display); font-size: 22px; }
+
+/* Terms checkbox */
+.terms-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: var(--space-6) 0;
+  padding: var(--space-4);
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-soft);
+}
+.terms-check input { width: 18px; height: 18px; margin-top: 3px; flex-shrink: 0; accent-color: var(--color-forest); cursor: pointer; }
+.terms-check label { font-size: 14px; line-height: 1.5; color: var(--color-text); cursor: pointer; }
+.terms-check label a { text-decoration: underline; font-weight: 600; }
+
+/* ============================================
+   CONFIRMATION
+   ============================================ */
+.confirm-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  text-align: center;
+}
+.confirm-banner {
+  padding: var(--space-10) var(--space-6);
+  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%);
+  color: var(--color-text-light);
+}
+.confirm-icon {
+  width: 72px; height: 72px;
+  margin: 0 auto var(--space-4);
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-icon svg { width: 36px; height: 36px; color: var(--color-banana-light); }
+.confirm-banner h2 { color: var(--color-text-light); font-size: 28px; }
+.confirm-banner p { color: rgba(245,238,227,0.85); margin-top: var(--space-2); }
+
+.confirm-body { padding: var(--space-8); }
+.order-id-display {
+  background: var(--bg-soft);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.order-id-display .label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-dim); }
+.order-id-display .id {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+}
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-forest);
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
+  background: var(--bg-white);
+}
+.copy-btn:hover { background: var(--bg-soft); }
+
+.confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+@media (max-width: 480px) { .confirm-actions { grid-template-columns: 1fr; } }
+
+/* ============================================
+   MY ORDERS / DASHBOARD
+   ============================================ */
+.dashboard-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+.search-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-white);
+  font-size: 14px;
+  min-height: 40px;
+}
+.search-input:focus { outline: none; border-color: var(--color-forest); }
+
+.filter-select {
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-white);
+  font-size: 14px;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.orders-list { display: flex; flex-direction: column; gap: var(--space-4); }
+.order-item {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  transition: all var(--transition-fast);
+}
+.order-item:hover { box-shadow: var(--shadow-sm); border-color: var(--color-banana); }
+
+.order-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.order-item-id { font-family: var(--font-display); font-size: 18px; font-weight: 700; }
+.order-item-date { font-size: 12px; color: var(--color-text-dim); margin-top: 2px; }
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.status-badge .dot { width: 6px; height: 6px; border-radius: 50%; }
+.status-placed { background: var(--color-info-bg); color: var(--color-info); }
+.status-placed .dot { background: var(--color-info); }
+.status-confirmed { background: var(--color-info-bg); color: var(--color-info); }
+.status-confirmed .dot { background: var(--color-info); }
+.status-preparing { background: var(--color-warning-bg); color: var(--color-warning); }
+.status-preparing .dot { background: var(--color-warning); }
+.status-ready { background: var(--color-warning-bg); color: var(--color-warning); }
+.status-ready .dot { background: var(--color-warning); }
+.status-out { background: var(--color-warning-bg); color: var(--color-warning); }
+.status-out .dot { background: var(--color-warning); }
+.status-delivered { background: var(--color-success-bg); color: var(--color-success); }
+.status-delivered .dot { background: var(--color-success); }
+.status-cancelled { background: var(--color-error-bg); color: var(--color-error); }
+.status-cancelled .dot { background: var(--color-error); }
+
+.order-item-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+.order-item-meta { font-size: 14px; color: var(--color-text-muted); }
+.order-item-meta strong { color: var(--color-text); font-family: var(--font-display); }
+.order-item-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-16) var(--space-6);
+  background: var(--bg-card);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+.empty-state svg { width: 80px; height: 80px; margin: 0 auto var(--space-4); opacity: 0.5; }
+.empty-state h3 { font-size: 20px; margin-bottom: var(--space-2); }
+.empty-state p { color: var(--color-text-muted); font-size: 14px; }
+
+/* ============================================
+   TRACKING
+   ============================================ */
+.tracking-input-wrap {
+  max-width: 480px;
+  margin: 0 auto var(--space-8);
+  display: flex;
+  gap: var(--space-2);
+}
+.tracking-input-wrap input { flex: 1; }
+.tracking-input-wrap button { white-space: nowrap; }
+
+.timeline {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: var(--space-8);
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-border);
+}
+.timeline-step {
+  position: relative;
+  padding-bottom: var(--space-8);
+}
+.timeline-step:last-child { padding-bottom: 0; }
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bg-cream);
+  border: 2px solid var(--color-border);
+  z-index: 1;
+}
+.timeline-step.done::before { background: var(--color-forest); border-color: var(--color-forest); }
+.timeline-step.current::before { background: var(--color-banana); border-color: var(--color-banana); box-shadow: 0 0 0 4px rgba(217,169,26,0.2); }
+.timeline-step.cancelled::before { background: var(--color-error); border-color: var(--color-error); }
+.timeline-step h4 { font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--color-text); }
+.timeline-step.pending h4 { color: var(--color-text-dim); }
+.timeline-step .time { font-size: 12px; color: var(--color-text-dim); margin-top: 2px; }
+.timeline-step .note { font-size: 13px; color: var(--color-text-muted); margin-top: 6px; }
+
+.tracking-info-card {
+  max-width: 640px;
+  margin: var(--space-8) auto 0;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+.tracking-info-head {
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-dark);
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.tracking-info-body { padding: var(--space-5) var(--space-6); }
+.tracking-info-body dl { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-6); }
+.tracking-info-body dt { font-size: 12px; color: var(--color-text-dim); }
+.tracking-info-body dd { font-size: 14px; font-weight: 500; }
+@media (max-width: 480px) { .tracking-info-body dl { grid-template-columns: 1fr; } }
+
+.tracking-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-5); }
+
+/* ============================================
+   INVOICE
+   ============================================ */
+.invoice-list { display: flex; flex-direction: column; gap: var(--space-3); }
+.invoice-item {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.invoice-item-info .inv-no { font-family: var(--font-display); font-weight: 600; font-size: 15px; }
+.invoice-item-info .meta { font-size: 12px; color: var(--color-text-dim); margin-top: 2px; }
+.invoice-item-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+/* Invoice document (for print/PDF) */
+#invoice-print-area {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 210mm;
+  background: white;
+  padding: 18mm;
+  color: #1A1410;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+.inv-doc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 3px solid #1F4D33;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+.inv-doc-brand h1 { font-family: 'Playfair Display', serif; font-size: 26px; color: #1A1410; margin: 0; }
+.inv-doc-brand p { font-size: 11px; color: #6B5D50; margin: 2px 0; }
+.inv-doc-meta { text-align: right; }
+.inv-doc-meta h2 { font-family: 'Inter', sans-serif; font-size: 18px; color: #1F4D33; margin: 0 0 6px; }
+.inv-doc-meta p { font-size: 11px; color: #6B5D50; margin: 1px 0; }
+.inv-doc-section { margin-bottom: 18px; }
+.inv-doc-section h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #6B5D50; margin-bottom: 6px; }
+.inv-doc-section p { font-size: 12px; margin: 1px 0; }
+.inv-doc-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+.inv-doc-table th { background: #1A1410; color: white; padding: 8px 10px; text-align: left; font-size: 11px; font-weight: 600; }
+.inv-doc-table td { padding: 8px 10px; border-bottom: 1px solid #E0D5C5; font-size: 12px; }
+.inv-doc-table tr:last-child td { border-bottom: none; }
+.inv-doc-totals { margin-left: auto; width: 280px; margin-top: 12px; }
+.inv-doc-totals .row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 12px; }
+.inv-doc-totals .row.grand { border-top: 2px solid #1A1410; margin-top: 6px; padding-top: 8px; font-weight: 700; font-size: 14px; }
+.inv-doc-totals .row.grand .amt { color: #1F4D33; }
+.inv-doc-payment { background: #F5EEE3; border-left: 3px solid #D9A91A; padding: 12px; margin-top: 18px; font-size: 11px; }
+.inv-doc-payment strong { color: #1A1410; }
+.inv-doc-foot { margin-top: 28px; padding-top: 12px; border-top: 1px solid #E0D5C5; text-align: center; font-size: 10px; color: #9C8E80; }
+.inv-doc-cancelled-stamp {
+  display: inline-block;
+  border: 2px solid #A02020;
+  color: #A02020;
+  padding: 4px 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transform: rotate(-4deg);
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* ============================================
+   TERMS & ABOUT & CONTACT
+   ============================================ */
+.prose { max-width: 720px; margin: 0 auto; }
+.prose h3 { font-size: 20px; margin-top: var(--space-8); margin-bottom: var(--space-3); }
+.prose h3:first-child { margin-top: 0; }
+.prose p { margin-bottom: var(--space-4); color: var(--color-text-muted); }
+.prose ul { margin: var(--space-3) 0 var(--space-4); padding-left: var(--space-5); }
+.prose li { margin-bottom: var(--space-2); color: var(--color-text-muted); }
+.prose strong { color: var(--color-text); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+  max-width: 880px;
+  margin: 0 auto;
+}
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  text-align: center;
+}
+.contact-card .icon {
+  width: 48px; height: 48px;
+  margin: 0 auto var(--space-3);
+  background: var(--bg-dark);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.contact-card .icon svg { width: 24px; height: 24px; color: var(--color-banana-light); }
+.contact-card h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-dim); margin-bottom: 6px; font-family: var(--font-body); }
+.contact-card p { font-size: 15px; font-weight: 500; }
+.contact-card a { font-size: 15px; font-weight: 500; }
+
+/* Banana tree decoration */
+.banana-tree-deco {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: var(--space-8) auto;
+  opacity: 0.95;
+}
+
+/* ============================================
+   TOAST
+   ============================================ */
+#toast-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 360px;
+}
+.toast {
+  background: var(--bg-dark);
+  color: var(--color-text-light);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  animation: toastIn 300ms ease;
+  border-left: 3px solid var(--color-banana);
+}
+.toast.success { border-left-color: var(--color-success); }
+.toast.error { border-left-color: var(--color-error); }
+.toast.warning { border-left-color: var(--color-warning); }
+.toast.info { border-left-color: var(--color-info); }
+.toast .toast-close { margin-left: auto; color: var(--color-text-light-dim); cursor: pointer; padding: 0 4px; }
+@keyframes toastIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+
+/* ============================================
+   MODAL
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26,20,16,0.7);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  animation: fadeIn 200ms ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: modalIn 250ms ease;
+}
+@keyframes modalIn { from { opacity: 0; transform: translateY(20px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.modal-head { padding: var(--space-5) var(--space-6); border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; }
+.modal-head h3 { font-size: 18px; }
+.modal-close { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); color: var(--color-text-muted); }
+.modal-close:hover { background: var(--bg-soft); }
+.modal-body { padding: var(--space-6); }
+.modal-body p { color: var(--color-text-muted); margin-bottom: var(--space-3); font-size: 14px; }
+.modal-footer { padding: var(--space-4) var(--space-6); border-top: 1px solid var(--color-border); display: flex; justify-content: flex-end; gap: var(--space-2); }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--bg-dark);
+  color: var(--color-text-light-dim);
+  padding: var(--space-12) 0 var(--space-6);
+}
+.site-footer .container { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); text-align: center; }
+.footer-brand { font-family: var(--font-display); font-size: 22px; color: var(--color-text-light); }
+.footer-links { display: flex; gap: var(--space-5); flex-wrap: wrap; justify-content: center; }
+.footer-links a { color: var(--color-text-light-dim); font-size: 14px; }
+.footer-links a:hover { color: var(--color-banana-light); }
+.footer-meta { font-size: 12px; color: var(--color-text-dim); max-width: 560px; }
+.footer-copy { font-size: 12px; color: var(--color-text-dim); padding-top: var(--space-4); border-top: 1px solid var(--color-border-dark); width: 100%; }
+
+/* ============================================
+   LIMITATIONS DISCLOSURE
+   ============================================ */
+.limitations-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-3);
+}
+.limitation-item {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-warning);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4) var(--space-5);
+}
+.limitation-item .num {
+  display: inline-flex;
+  width: 22px; height: 22px;
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.limitation-item strong { font-size: 14px; }
+.limitation-item p { font-size: 13px; color: var(--color-text-muted); margin-top: 4px; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 820px) {
+  .hero .container { grid-template-columns: 1fr; gap: var(--space-8); }
+  .hero-visual { order: -1; min-height: 280px; }
+  .product-grid { grid-template-columns: 1fr; }
+  .hero-meta { flex-wrap: wrap; gap: var(--space-4); }
+  section { padding: var(--space-12) 0; }
+  .floating-banana { width: 50px; }
+  .floating-banana.b2 { width: 40px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 var(--space-4); }
+  .hero h1 { font-size: 36px; }
+  .order-form { padding: var(--space-5); }
+  .confirm-actions { grid-template-columns: 1fr; }
+  .whatsapp-fab { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .whatsapp-fab svg { width: 26px; height: 26px; }
+  #toast-container { left: 16px; right: 16px; bottom: 80px; max-width: none; }
+}
+
+/* Utility */
+.text-center { text-align: center; }
+.mt-0 { margin-top: 0; }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+
+/* ===== Refined Dhirik Chips visual refresh ===== */
+:root{--bg-dark:#100F0B;--bg-dark-2:#19170F;--bg-dark-3:#242014;--bg-cream:#F0E8D7;--bg-soft:#E8DEC9;--color-banana:#D6A72B;--color-banana-light:#F0CA62;--color-banana-dark:#76550D;--color-forest:#173B29;--color-forest-light:#28563A;--color-forest-dark:#10291D;--color-text:#211D15;--color-text-muted:#655C4D;--color-border:#D2C5AD;--radius-lg:14px;--radius-xl:18px}
+body{background:var(--bg-cream)}.site-header{background:rgba(16,15,11,.985);border-bottom-color:rgba(214,167,43,.24)}
+.hero{min-height:78vh;background:radial-gradient(ellipse at 78% 22%,rgba(214,167,43,.13),transparent 36%),linear-gradient(135deg,#100F0B 0%,#17251A 58%,#10140F 100%)}
+.hero::before{opacity:.45}.hero h1{letter-spacing:-.035em}.hero-sub{color:#D0C6B2;max-width:490px}.hero-visual{min-height:420px}
+.hero-banana-art{width:min(100%,410px);filter:drop-shadow(0 24px 28px rgba(0,0,0,.34));animation:harvestFloat 6s ease-in-out infinite}
+@keyframes harvestFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+.product-visual{min-height:420px;background:linear-gradient(145deg,#D9D0B9,#B7B99A);border-radius:16px}
+.product-chip-art{width:min(100%,330px);filter:drop-shadow(0 18px 22px rgba(25,32,18,.2));transform:rotate(-2deg)}
+.product-info>p{line-height:1.8}.packaging-note{background:#E6DEC9;border-left-color:#B88A1D}
+.btn-primary{background:#173B29}.btn-primary:hover{background:#28563A}.btn-banana{background:#D6A72B}
+.order-card,.confirm-card{border:1px solid rgba(35,29,19,.08);box-shadow:0 12px 34px rgba(28,24,16,.09)}
+.order-card-header{background:linear-gradient(115deg,#11130E,#1D2D20)}
+.form-control:focus{border-color:#315D3B;box-shadow:0 0 0 3px rgba(49,93,59,.12)}
+.section-soft{background:#E8DEC9}.section-cream{background:#F0E8D7}.price-row .price{color:#173B29}
+.price-breakdown h4{background:#17160F}.whatsapp-fab{box-shadow:0 8px 24px rgba(0,0,0,.24)}
+.floating-banana{filter:drop-shadow(0 7px 9px rgba(0,0,0,.2))}
+@media(max-width:820px){.hero{min-height:auto;padding:58px 0 64px}.hero-visual{min-height:260px}.hero-banana-art{max-width:300px}}
+@media(max-width:480px){.hero h1{font-size:clamp(34px,10vw,42px)}.section-header{margin-bottom:30px}.product-visual{min-height:300px;padding:28px 18px}}
+@media(prefers-reduced-motion:reduce){.hero-banana-art{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="site-header">
+  <div class="container">
+    <a href="#home" class="brand" data-nav="home">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" fill="#D9A91A"/>
+        <path d="M12 26 C 12 14, 22 10, 28 14 C 26 18, 22 20, 20 24 C 18 28, 14 28, 12 26 Z" fill="#1A1410"/>
+        <path d="M12 26 C 12 14, 22 10, 28 14" stroke="#8B6914" stroke-width="1" fill="none"/>
+      </svg>
+      Dhirik Chips
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="#home" data-nav="home" class="active">Home</a>
+      <a href="#product" data-nav="product">Product</a>
+      <a href="#order" data-nav="order">Place Order</a>
+      <a href="#orders" data-nav="orders">My Orders</a>
+      <a href="#tracking" data-nav="tracking">Tracking</a>
+      <a href="#invoices" data-nav="invoices">Invoices</a>
+      <a href="#terms" data-nav="terms">Terms</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section id="home" class="hero">
+  <!-- Floating bananas -->
+  <svg class="floating-banana b1" viewBox="0 0 60 100" fill="none">
+    <path d="M8 88 C 8 30, 30 8, 52 14 C 50 22, 44 26, 38 32 C 30 40, 24 52, 20 66 C 16 78, 12 84, 8 88 Z" fill="#D9A91A" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M8 88 C 8 30, 30 8, 52 14" stroke="#8B6914" stroke-width="0.8" fill="none"/>
+    <path d="M10 86 C 14 78, 18 68, 22 58" stroke="#B89020" stroke-width="0.6" fill="none" opacity="0.6"/>
+  </svg>
+  <svg class="floating-banana b2" viewBox="0 0 60 100" fill="none">
+    <path d="M8 88 C 8 30, 30 8, 52 14 C 50 22, 44 26, 38 32 C 30 40, 24 52, 20 66 C 16 78, 12 84, 8 88 Z" fill="#E8C04A" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M8 88 C 8 30, 30 8, 52 14" stroke="#8B6914" stroke-width="0.8" fill="none"/>
+  </svg>
+  <svg class="floating-banana b3" viewBox="0 0 60 100" fill="none">
+    <path d="M8 88 C 8 30, 30 8, 52 14 C 50 22, 44 26, 38 32 C 30 40, 24 52, 20 66 C 16 78, 12 84, 8 88 Z" fill="#D9A91A" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M8 88 C 8 30, 30 8, 52 14" stroke="#8B6914" stroke-width="0.8" fill="none"/>
+  </svg>
+  <svg class="floating-banana b4" viewBox="0 0 60 100" fill="none">
+    <path d="M8 88 C 8 30, 30 8, 52 14 C 50 22, 44 26, 38 32 C 30 40, 24 52, 20 66 C 16 78, 12 84, 8 88 Z" fill="#E8C04A" stroke="#8B6914" stroke-width="1.5"/>
+    <path d="M8 88 C 8 30, 30 8, 52 14" stroke="#8B6914" stroke-width="0.8" fill="none"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">From Raha, Assam</div>
+      <h1>Crunchy banana chips, <span class="accent">honestly made</span></h1>
+      <p class="hero-sub">
+        Dhirik Chips is a simple, crunchy banana snack made with banana, refined oil, and plain salt.
+        No fancy branded pouch — just golden, crunchy banana chips in simple transparent plastic, delivered at Raha College.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-banana" data-nav="order">Order a pack — ₹15</button>
+        <button class="btn btn-outline" data-nav="product">See the product</button>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <span class="label">Price</span>
+          <span class="value">₹15 / pack</span>
+        </div>
+        <div>
+          <span class="label">Pickup</span>
+          <span class="value">Raha College</span>
+        </div>
+        <div>
+          <span class="label">Payment</span>
+          <span class="value">COD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- Transparent plastic pack illustration with visible chips -->
+      <svg class="pack-svg hero-banana-art" viewBox="0 0 420 420" role="img" aria-label="Banana tree, ripe bananas and a bowl of golden banana chips">
+<defs><linearGradient id="leafA" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#527D3D"/><stop offset="1" stop-color="#183D2B"/></linearGradient><linearGradient id="bananaA" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F5D45B"/><stop offset="1" stop-color="#B98416"/></linearGradient><linearGradient id="bowlA" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#A65A2E"/><stop offset="1" stop-color="#5D2D1D"/></linearGradient></defs>
+<ellipse cx="214" cy="376" rx="155" ry="18" fill="#000" opacity=".22"/><path d="M207 305 Q194 184 207 75" stroke="#6A4827" stroke-width="18" stroke-linecap="round"/>
+<path d="M205 105 Q95 12 35 93 Q113 145 205 126Z" fill="url(#leafA)"/><path d="M207 104 Q277 0 377 49 Q324 126 207 127Z" fill="#315E35"/><path d="M205 123 Q88 80 54 174 Q136 201 207 143Z" fill="#244D31"/><path d="M211 126 Q324 75 385 157 Q308 204 211 147Z" fill="#416F39"/><path d="M206 142 Q145 112 116 218 Q181 221 210 160Z" fill="#527D3D"/>
+<g fill="url(#bananaA)" stroke="#805C16" stroke-width="3"><path d="M229 117 Q262 143 300 194 Q313 213 299 224 Q284 233 270 215 Q236 168 218 135Z"/><path d="M222 121 Q244 167 258 218 Q264 240 247 245 Q229 248 222 226 Q204 173 208 132Z"/><path d="M216 123 Q218 174 210 222 Q206 245 188 241 Q172 236 178 215 Q193 164 204 126Z"/><path d="M211 124 Q190 169 161 205 Q147 222 133 211 Q120 197 138 181 Q175 143 202 119Z"/><path d="M231 119 Q279 137 329 165 Q349 177 340 194 Q330 209 309 195 Q258 161 220 137Z"/></g>
+<g fill="#D99A2B" stroke="#8E5B18" stroke-width="2"><ellipse cx="112" cy="312" rx="37" ry="14" transform="rotate(-18 112 312)"/><ellipse cx="157" cy="293" rx="38" ry="14" transform="rotate(13 157 293)"/><ellipse cx="204" cy="311" rx="39" ry="14" transform="rotate(-8 204 311)"/><ellipse cx="254" cy="291" rx="38" ry="14" transform="rotate(17 254 291)"/><ellipse cx="300" cy="313" rx="36" ry="14" transform="rotate(-14 300 313)"/><ellipse cx="145" cy="338" rx="37" ry="13" transform="rotate(8 145 338)"/><ellipse cx="200" cy="345" rx="40" ry="14" transform="rotate(-5 200 345)"/><ellipse cx="255" cy="337" rx="37" ry="13" transform="rotate(12 255 337)"/></g><path d="M70 293 Q205 355 348 293 L326 351 Q211 395 92 351Z" fill="url(#bowlA)" stroke="#D99A2B" stroke-width="4"/><path d="M73 294 Q207 349 346 294" fill="none" stroke="#F2C56A" stroke-width="7" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PRODUCT DETAILS
+     ============================================ -->
+<section id="product" class="section-cream">
+  <div class="container">
+    <div class="product-grid">
+      <div class="product-visual">
+        <svg class="pack-svg product-chip-art" viewBox="0 0 360 360" role="img" aria-label="Golden banana chips served on a fresh banana leaf">
+<ellipse cx="180" cy="300" rx="145" ry="24" fill="#2D241B" opacity=".12"/><path d="M38 235 Q111 78 300 100 Q278 251 91 285 Q57 274 38 235Z" fill="#315F37"/><path d="M49 239 Q167 197 294 112" fill="none" stroke="#8EB16A" stroke-width="4" opacity=".8"/>
+<g fill="#D99A2B" stroke="#966316" stroke-width="3"><ellipse cx="104" cy="187" rx="47" ry="23" transform="rotate(-25 104 187)"/><ellipse cx="169" cy="153" rx="48" ry="23" transform="rotate(14 169 153)"/><ellipse cx="230" cy="184" rx="48" ry="23" transform="rotate(-17 230 184)"/><ellipse cx="143" cy="226" rx="50" ry="23" transform="rotate(9 143 226)"/><ellipse cx="211" cy="235" rx="48" ry="22" transform="rotate(-10 211 235)"/><ellipse cx="272" cy="220" rx="38" ry="19" transform="rotate(19 272 220)"/><ellipse cx="79" cy="237" rx="34" ry="18" transform="rotate(15 79 237)"/></g><g fill="none" stroke="#F7D979" stroke-width="3" stroke-linecap="round"><path d="M75 182q25-13 52-12"/><path d="M141 147q26-11 53-3"/><path d="M205 179q24-10 48-5"/><path d="M119 222q26-10 53-4"/><path d="M189 230q23-10 47-5"/></g></svg>
+      </div>
+
+      <div class="product-info">
+        <div class="eyebrow">The Product</div>
+        <h2>Dhirik Chips</h2>
+        <p>
+          Dhirik Chips is a delicious, crunchy banana snack made using banana, refined oil, and plain salt.
+          Enjoy a simple and satisfying snack with every pack.
+        </p>
+
+        <div class="ingredients">
+          <span class="ingredient-chip"><span class="dot"></span> Banana</span>
+          <span class="ingredient-chip"><span class="dot"></span> Refined oil</span>
+          <span class="ingredient-chip"><span class="dot"></span> Plain salt</span>
+        </div>
+
+        <div class="packaging-note">
+          <strong>Packaging:</strong> Packed simply in a clear, lightweight plastic bag so you can see the chips. No expensive branded pouch or unnecessary packaging.
+        </div>
+
+        <div class="price-row">
+          <span class="price">₹15</span>
+          <span class="unit">per pack · Cash on Delivery</span>
+        </div>
+
+        <div class="price-breakdown">
+          <h4>Price breakdown</h4>
+          <table class="breakdown-table">
+            <tr><td>Material price</td><td>₹10</td></tr>
+            <tr><td>Server cost</td><td>₹3</td></tr>
+            <tr><td>Database cost</td><td>₹1</td></tr>
+            <tr><td>Delivery cost</td><td>₹1</td></tr>
+            <tr><td>Total selling price</td><td>₹15</td></tr>
+          </table>
+        </div>
+
+        <div class="mt-8">
+          <button class="btn btn-primary" data-nav="order">Place an order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PLACE ORDER
+     ============================================ -->
+<section id="order" class="section-soft">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Checkout</div>
+      <h2>Place your order</h2>
+      <p>Fill in your details below. Delivery is available exclusively at Raha College, Raha, Nagaon, Assam — 782103.</p>
+    </div>
+
+    <div class="order-wrap">
+      <div class="order-card">
+        <div class="order-card-header">
+          <h3>Order details</h3>
+          <p>Pay by Cash on Delivery. Payment due within 7 working days after delivery.</p>
+        </div>
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="form-group">
+            <label for="custName">Full name <span class="req">*</span></label>
+            <input type="text" id="custName" name="custName" class="form-control" placeholder="e.g. Rituparna Das" maxlength="60" autocomplete="name">
+            <div class="form-error" id="errName">Please enter your full name.</div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custPhone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="custPhone" name="custPhone" class="form-control" placeholder="10-digit number starting 6, 7, 8 or 9" maxlength="10" inputmode="numeric" pattern="[6-9][0-9]{9}" autocomplete="tel">
+              <div class="form-error" id="errPhone">Invalid phone number. Enter exactly 10 digits starting with 6, 7, 8 or 9.</div>
+            </div>
+            <div class="form-group">
+              <label for="custEmail">Email <span class="req">*</span></label>
+              <input type="email" id="custEmail" name="custEmail" class="form-control" placeholder="yourname@gmail.com" maxlength="80" autocomplete="email">
+              <div class="form-error" id="errEmail">Use a valid @gmail.com address containing at least 2–3 letters from your name.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Delivery address</label>
+            <div class="field-readonly">
+              <span class="lock">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              Raha College, Raha, Nagaon, Assam, India — PIN: 782103
+            </div>
+            <div class="hint">Delivery is available exclusively at Raha College. The address cannot be changed.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="qtyInput">Quantity <span class="req">*</span></label>
+            <div class="qty-control">
+              <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <input type="number" id="qtyInput" name="qtyInput" class="qty-input" value="1" min="1" inputmode="numeric">
+              <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+            <div class="form-error" id="errQty">Please enter a valid quantity.</div>
+            <div class="form-error" id="errQtyMax" style="display:none;"></div>
+          </div>
+
+          <div class="order-summary" id="orderSummary">
+            <h4>Order summary</h4>
+            <div class="summary-line"><span>Product</span><span>Dhirik Chips</span></div>
+            <div class="summary-line"><span>Unit price</span><span>₹15</span></div>
+            <div class="summary-line"><span>Quantity</span><span id="sumQty">1</span></div>
+            <div class="summary-line"><span>Material (₹10 × quantity)</span><span id="sumMaterial">₹10</span></div>
+            <div class="summary-line"><span>Server cost (₹3 × quantity)</span><span id="sumServer">₹3</span></div>
+            <div class="summary-line"><span>Database cost (₹1 × quantity)</span><span id="sumDatabase">₹1</span></div>
+            <div class="summary-line"><span>Delivery component (₹1 × quantity)</span><span id="sumDelivery">₹1</span></div>
+            <div class="summary-line"><span>Subtotal</span><span id="sumSubtotal">₹15</span></div>
+            <div class="summary-line" id="bulkDiscountRow" style="display:none;color:var(--color-success);font-weight:600;"><span>Bulk delivery discount</span><span id="sumDiscount">−₹0</span></div>
+            <div class="summary-line"><span>Delivery payable</span><span id="sumDeliveryPayable">₹0</span></div>
+            <div class="summary-line total"><span>Grand total</span><span class="amt" id="sumTotal">₹15</span></div>
+            <div class="hint" id="bulkDiscountHint" style="margin-top:8px;">Order more than 10 packs to receive a delivery-component discount on every pack in this order.</div>
+          </div>
+
+          <div class="terms-check">
+            <input type="checkbox" id="termsAgree" name="termsAgree">
+            <label for="termsAgree">I have read and agree to the DHIRIK CHIPS <a href="#terms" data-nav="terms">Terms &amp; Conditions</a> and COD payment policy.</label>
+          </div>
+          <div class="form-error" id="errTerms" style="margin-bottom:12px;">Please accept the Terms &amp; Conditions to continue.</div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitOrderBtn">Place order — Cash on Delivery</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONFIRMATION (hidden until order placed)
+     ============================================ -->
+<section id="confirmation" class="section-cream hidden">
+  <div class="container">
+    <div class="confirm-card">
+      <div class="confirm-banner">
+        <div class="confirm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2>Your order has been placed successfully!</h2>
+        <p>Save your Order ID — you'll need it for tracking, invoices, and cancellation.</p>
+      </div>
+      <div class="confirm-body">
+        <div class="order-id-display">
+          <div class="label">Your Order ID</div>
+          <div class="id" id="confirmOrderId">—</div>
+          <button class="copy-btn" id="copyOrderIdBtn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy Order ID
+          </button>
+        </div>
+        <div id="confirmDetails" style="text-align:left; margin-bottom: var(--space-6); font-size: 14px; color: var(--color-text-muted);"></div>
+        <div id="confirmNotification" style="margin-bottom: var(--space-6);"></div>
+        <div class="confirm-actions">
+          <button class="btn btn-ghost" id="confirmViewInvoice">View Invoice</button>
+          <button class="btn btn-ghost" id="confirmDownloadInvoice">Download PDF</button>
+          <button class="btn btn-ghost" data-nav="tracking" id="confirmTrack">Track Order</button>
+          <button class="btn btn-primary" data-nav="orders">My Orders</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MY ORDERS
+     ============================================ -->
+<section id="orders" class="section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Dashboard</div>
+      <h2>My orders</h2>
+      <p>All orders placed from this browser are listed here. Orders do not sync across devices or browsers.</p>
+    </div>
+
+    <div class="dashboard-toolbar">
+      <input type="text" class="search-input" id="orderSearch" placeholder="Search by Order ID or name…">
+      <select class="filter-select" id="orderFilter">
+        <option value="all">All statuses</option>
+        <option value="placed">Placed</option>
+        <option value="delivered">Delivered</option>
+        <option value="cancelled">Cancelled</option>
+      </select>
+      <button class="btn btn-dark btn-sm" data-nav="order">New order</button>
+    </div>
+
+    <div id="ordersList"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     ORDER TRACKING
+     ============================================ -->
+<section id="tracking" class="section-soft">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Follow your order</div>
+      <h2>Order tracking</h2>
+      <p>Enter your Order ID to see the current status and timeline.</p>
+    </div>
+
+    <div class="tracking-input-wrap">
+      <input type="text" class="form-control" id="trackInput" placeholder="e.g. DHIRIK-2026-00001">
+      <button class="btn btn-primary" id="trackBtn">Track</button>
+    </div>
+
+    <div id="trackingResult"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     INVOICE MANAGEMENT
+     ============================================ -->
+<section id="invoices" class="section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Documents</div>
+      <h2>Invoice management</h2>
+      <p>View, download, or print invoices for any of your orders.</p>
+    </div>
+    <div id="invoiceList"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     TERMS & CONDITIONS
+     ============================================ -->
+<section id="terms" class="section-soft">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">The rules</div>
+      <h2>Terms &amp; Conditions</h2>
+    </div>
+    <div class="prose">
+      <h3>1. Product &amp; pricing</h3>
+      <p>Dhirik Chips is sold at <strong>₹15 per pack</strong>. The price breakdown is: Material ₹10, Server cost ₹3, Database cost ₹1, Delivery cost ₹1. The delivery cost is already included in the selling price — you will not be charged any additional delivery fee at checkout. For orders of more than 10 packs, the ₹1 delivery component is discounted for every pack in that order; this discount applies only to that order.</p>
+
+      <h3>2. Delivery</h3>
+      <p>Delivery is available <strong>exclusively at Raha College, Raha, Nagaon, Assam — PIN 782103</strong>. The delivery address cannot be changed. Orders are hand-delivered by a single delivery agent.</p>
+
+      <h3>3. Payment — Cash on Delivery (COD)</h3>
+      <p>COD is the <strong>only</strong> accepted payment method. The payment is due <strong>within 7 working days (Monday to Friday, excluding weekends)</strong> after the delivery date. If the delivery date has not yet been confirmed, the payment due date will be calculated after delivery confirmation.</p>
+
+      <h3>4. Late payment interest</h3>
+      <p>If payment is not made by the due date, interest will be charged at <strong>24% per month, prorated daily</strong>, calculated as: <em>Outstanding × 0.24 × (elapsed days / 30)</em>. Interest is charged only on the outstanding amount and only after the due date, and will be shown separately from the principal.</p>
+
+      <h3>5. Cancellation</h3>
+      <p>An order can be cancelled only while its status is <strong>"Order Placed"</strong>. Once an order has been delivered or already cancelled, cancellation is not available. Cancelling an order triggers a cancellation notification email; the original invoice data is retained and remains viewable but is stamped as cancelled.</p>
+
+      <h3>6. Delivery confirmation</h3>
+      <p>Delivery status is recorded only when you explicitly confirm receipt of an order. This confirmation is your own acknowledgement and has not been independently verified by Dhirik Chips. The payment due date is calculated from the date you confirm delivery.</p>
+
+      <h3>7. Acceptance</h3>
+      <p>By placing an order you confirm that you have read and agree to these Terms &amp; Conditions and the COD payment policy. Your acceptance (with timestamp and terms version) is recorded with each order.</p>
+
+      <p style="font-size: 13px; color: var(--color-text-dim); margin-top: var(--space-6);">Terms version: <strong>1.0</strong> · Last updated: January 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section id="about" class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Our story</div>
+      <h2>About Dhirik Chips</h2>
+    </div>
+    <div class="prose">
+      <p style="color: var(--color-text-light-dim);">
+        Dhirik Chips is a small banana-chip snack made in Raha, Nagaon, Assam. We started with a simple idea:
+        make a crunchy, satisfying snack using just three ingredients — banana, refined oil, and plain salt —
+        and sell it honestly, without hiding behind premium packaging or inflated prices.
+      </p>
+      <p style="color: var(--color-text-light-dim);">
+        Every pack is sold in transparent plastic so you can see exactly what you're getting.
+        We deliver locally at Raha College, and payment is collected in cash after delivery —
+        because trust works both ways.
+      </p>
+    </div>
+
+    <!-- Banana tree illustration -->
+    <svg class="banana-tree-deco" viewBox="0 0 360 280" fill="none">
+      <!-- Ground -->
+      <ellipse cx="180" cy="265" rx="120" ry="10" fill="rgba(31,77,51,0.25)"/>
+      <!-- Trunk -->
+      <path d="M170 260 C 168 200, 172 140, 178 80 L 188 80 C 184 140, 182 200, 184 260 Z" fill="#3D322A" stroke="#2A2018" stroke-width="1"/>
+      <path d="M176 240 L 186 240 M175 200 L 187 200 M174 160 L 188 160 M177 120 L 185 120" stroke="#2A2018" stroke-width="0.8"/>
+      <!-- Large leaves -->
+      <path d="M180 90 C 120 70, 60 60, 30 80 C 60 75, 100 80, 140 95 C 160 100, 175 95, 180 90 Z" fill="#1F4D33" stroke="#143A26" stroke-width="1"/>
+      <path d="M180 85 C 240 60, 300 55, 335 75 C 300 70, 260 75, 220 90 C 200 95, 185 90, 180 85 Z" fill="#2D6B47" stroke="#1F4D33" stroke-width="1"/>
+      <path d="M180 70 C 130 35, 80 25, 50 40 C 85 38, 125 45, 160 65 C 172 70, 178 72, 180 70 Z" fill="#1F4D33" stroke="#143A26" stroke-width="1"/>
+      <path d="M180 65 C 230 30, 285 22, 320 38 C 285 35, 245 42, 210 60 C 195 68, 185 68, 180 65 Z" fill="#2D6B47" stroke="#1F4D33" stroke-width="1"/>
+      <path d="M180 55 C 160 25, 130 10, 110 15 C 130 20, 150 30, 170 50 C 176 55, 179 56, 180 55 Z" fill="#1F4D33"/>
+      <path d="M180 55 C 200 25, 230 10, 255 15 C 235 20, 215 30, 195 50 C 185 55, 182 56, 180 55 Z" fill="#2D6B47"/>
+      <!-- Banana bunch hanging -->
+      <g transform="translate(155, 95)">
+        <path d="M0 0 C -3 12, -2 25, 2 38" stroke="#3D322A" stroke-width="1.5" fill="none"/>
+        <path d="M-6 12 C -10 18, -12 26, -10 34 C -8 30, -6 24, -4 18 C -3 15, -4 13, -6 12 Z" fill="#D9A91A" stroke="#8B6914" stroke-width="0.8" transform="rotate(-20 -6 12)"/>
+        <path d="M-2 18 C -6 24, -8 32, -6 40 C -4 36, -2 30, 0 24 C 1 21, 0 19, -2 18 Z" fill="#E8C04A" stroke="#8B6914" stroke-width="0.8" transform="rotate(-15 -2 18)"/>
+        <path d="M4 16 C 0 22, -2 30, 0 38 C 2 34, 4 28, 6 22 C 7 19, 6 17, 4 16 Z" fill="#D9A91A" stroke="#8B6914" stroke-width="0.8" transform="rotate(-10 4 16)"/>
+        <path d="M-8 22 C -12 28, -14 36, -12 44 C -10 40, -8 34, -6 28 C -5 25, -6 23, -8 22 Z" fill="#C99812" stroke="#8B6914" stroke-width="0.8" transform="rotate(-25 -8 22)"/>
+        <path d="M2 24 C -2 30, -4 38, -2 46 C 0 42, 2 36, 4 30 C 5 27, 4 25, 2 24 Z" fill="#D9A91A" stroke="#8B6914" stroke-width="0.8" transform="rotate(-18 2 24)"/>
+      </g>
+      <!-- Small fallen bananas -->
+      <ellipse cx="100" cy="262" rx="14" ry="6" fill="#D9A91A" transform="rotate(-15 100 262)" opacity="0.85"/>
+      <ellipse cx="240" cy="263" rx="12" ry="5" fill="#C99812" transform="rotate(10 240 263)" opacity="0.85"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section id="contact" class="section-cream">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Contact information</h2>
+      <p>Questions, bulk orders, or feedback — reach out directly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4>Delivery point</h4>
+        <p>Raha College, Raha<br>Nagaon, Assam — 782103</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h4>WhatsApp / Phone</h4>
+        <p>+91 70869 41967</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h4>Email</h4>
+        <p>support@dhirikchips.in</p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Hours</h4>
+        <p>Orders accepted before 8 AM<br>and after 4 PM daily</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     LIMITATIONS DISCLOSURE
+     ============================================ -->
+<section id="limitations" class="section-soft">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Honesty first</div>
+      <h2>Technical limitations</h2>
+      <p>We believe in being transparent. Please read these limitations before using this site.</p>
+    </div>
+    <div class="limitations-list" id="limitationsList"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">Dhirik Chips</div>
+    <div class="footer-links">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#product" data-nav="product">Product</a>
+      <a href="#order" data-nav="order">Order</a>
+      <a href="#orders" data-nav="orders">My Orders</a>
+      <a href="#terms" data-nav="terms">Terms</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+      <a href="#limitations" data-nav="limitations">Tech Limitations</a>
+    </div>
+    <p class="footer-meta">
+      Dhirik Chips · Crunchy banana snack from Raha, Nagaon, Assam.<br>
+      Made with banana, refined oil, and plain salt. Sold in transparent plastic packaging.
+      Cash on Delivery at Raha College, PIN 782103.
+    </p>
+    <div class="footer-copy">© <span id="footerYear">2026</span> Dhirik Chips. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a class="whatsapp-fab" id="whatsappFab" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.608.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<!-- Toast container -->
+<div id="toast-container"></div>
+
+<!-- Invoice print/PDF area (off-screen) -->
+<div id="invoice-print-area"></div>
+
+<script>
+/* ============================================================
+   DHIRIK CHIPS — APPLICATION LOGIC
+   Single-file Vanilla JS ES6+
+   Sections:
+   1. CONFIG
+   2. Storage (safe localStorage)
+   3. Utilities (formatting, validation)
+   4. Order limits (hidden checks)
+   5. Order management
+   6. Invoice
+   7. Notifications (Web3Forms)
+   8. UI (nav, toast, modal, render)
+   9. Form handling
+   10. Init
+   ============================================================ */
+
+/* ---------- 1. CONFIG ---------- */
+const CONFIG = {
+  business: {
+    name: 'Dhirik Chips',
+    tagline: 'Crunchy banana snack from Raha, Assam',
+    year: 2026,
+    deliveryAddress: 'Raha College, Raha, Nagaon, Assam, India — PIN: 782103',
+    deliveryShort: 'Raha College, Raha, Nagaon, Assam – 782103',
+    email: 'support@dhirikchips.in',
+    whatsappNumber: '917086941967',
+    whatsappDisplay: '+91 70869 41967',
+    whatsappBulkMessage: "Hello Dhirik Chips, I'd like to place a bulk order for Dhirik Chips (more than 20 packs). Please share pricing and delivery details. Thank you."
+  },
+  product: {
+    id: 'dhirik-chips-001',
+    name: 'Dhirik Chips',
+    unitPrice: 15,
+    currency: '₹',
+    ingredients: ['Banana', 'Refined oil', 'Plain salt'],
+    description: 'Dhirik Chips is a delicious, crunchy banana snack made using banana, refined oil, and plain salt. Enjoy a simple and satisfying snack with every pack.',
+    packaging: 'Transparent plastic packaging',
+    stock: 1000
+  },
+  pricing: {
+    materialPrice: 10,
+    serverCost: 3,
+    databaseCost: 1,
+    deliveryCost: 1,
+    total: 15,
+    deliveryNote: 'Included in product price — ₹0 additional charge'
+  },
+  // HIDDEN order limits — NOT shown on page, only enforced with errors
+  orderLimits: {
+    maxPerDay: 2,          // max 2 orders per calendar day
+    maxQuantity: 20,       // max 20 packs per order
+    // Ordering allowed BEFORE 8am OR AFTER 4pm (i.e. NOT between 8am and 4pm)
+    blockedHourStart: 8,   // 8 AM (inclusive)
+    blockedHourEnd: 16     // 4 PM (exclusive — i.e. 16:00 onwards is allowed)
+  },
+  payment: {
+    method: 'COD',
+    dueWorkingDays: 7,
+    interestMonthlyRate: 0.24
+  },
+  api: {
+    web3forms: 'https://api.web3forms.com/submit',
+    newOrderKey: '919ef8bd-7b5f-4b83-903a-3b0998a2580c',
+    cancelOrderKey: 'bda9b3c2-d52d-4fe7-a01b-8e5e89d7f45b'
+  },
+  storage: {
+    customers: 'dhirik_customers_v1',
+    orders: 'dhirik_orders_v1',
+    counter: 'dhirik_order_counter_v1',
+    settings: 'dhirik_settings_v1'
+  },
+  terms: {
+    version: '1.0',
+    acceptanceText: 'I have read and agree to the DHIRIK CHIPS Terms & Conditions and COD payment policy.'
+  },
+  statuses: [
+    { key: 'placed',      label: 'Order Placed',          order: 1 },
+    { key: 'confirmed',   label: 'Order Confirmed',       order: 2 },
+    { key: 'preparing',   label: 'Preparing',             order: 3 },
+    { key: 'ready',       label: 'Ready for Delivery',    order: 4 },
+    { key: 'out',         label: 'Out for Delivery',      order: 5 },
+    { key: 'delivered',   label: 'Delivered',             order: 6 }
+  ],
+  cancelledKey: 'cancelled'
+};
+
+/* ---------- 2. STORAGE ---------- */
+const Storage = {
+  available: null,
+  isAvailable() {
+    if (this.available !== null) return this.available;
+    try {
+      const k = '__dhirik_test__';
+      localStorage.setItem(k, '1');
+      localStorage.removeItem(k);
+      this.available = true;
+    } catch (e) {
+      this.available = false;
+    }
+    return this.available;
+  },
+  get(key, fallback) {
+    if (!this.isAvailable()) return fallback;
+    try {
+      const raw = localStorage.getItem(key);
+      if (raw === null) return fallback;
+      return JSON.parse(raw);
+    } catch (e) {
+      console.warn('Storage parse error for', key, e);
+      // Remove corrupted data
+      try { localStorage.removeItem(key); } catch (_) {}
+      return fallback;
+    }
+  },
+  set(key, value) {
+    if (!this.isAvailable()) return false;
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (e) {
+      console.error('Storage set error for', key, e);
+      return false;
+    }
+  },
+  remove(key) {
+    if (!this.isAvailable()) return;
+    try { localStorage.removeItem(key); } catch (e) {}
+  }
+};
+
+/* ---------- 3. UTILITIES ---------- */
+const Utils = {
+  formatCurrency(amount) {
+    const n = Math.round(Number(amount) || 0);
+    return '₹' + n.toLocaleString('en-IN');
+  },
+  formatDate(d) {
+    const date = new Date(d);
+    if (isNaN(date)) return '—';
+    const dd = String(date.getDate()).padStart(2, '0');
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const yyyy = date.getFullYear();
+    return dd + '/' + mm + '/' + yyyy;
+  },
+  formatTime(d) {
+    const date = new Date(d);
+    if (isNaN(date)) return '';
+    let h = date.getHours();
+    const m = String(date.getMinutes()).padStart(2, '0');
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return h + ':' + m + ' ' + ampm;
+  },
+  formatDateTime(d) {
+    return this.formatDate(d) + ' · ' + this.formatTime(d);
+  },
+  todayISO() {
+    return new Date().toISOString().split('T')[0];
+  },
+  generateInternalRef() {
+    return 'REF-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+  },
+  isValidEmail(email, fullName) {
+    if (!email || !fullName) return false;
+    const value = email.trim().toLowerCase();
+    if (!/^[a-z0-9._%+-]+@gmail\.com$/.test(value)) return false;
+    const localPart = value.split('@')[0];
+    const nameParts = fullName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z]+/).filter(Boolean);
+    // Require the Gmail username to contain a 2–3 letter prefix from at least one name part.
+    return nameParts.some(part => part.length >= 2 && (localPart.includes(part.slice(0, 2)) || (part.length >= 3 && localPart.includes(part.slice(0, 3)))));
+  },
+  isValidPhone(phone) {
+    if (!phone) return false;
+    const p = phone.replace(/\s/g, '');
+    return /^[6-9]\d{9}$/.test(p);
+  },
+  normalizePhone(phone) {
+    return phone ? phone.replace(/\s/g, '') : '';
+  },
+  escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  },
+  // For safe text insertion (uses textContent internally)
+  safeText(str) {
+    return String(str === null || str === undefined ? '' : str);
+  },
+  whatsappUrl(message) {
+    const msg = message || CONFIG.business.whatsappBulkMessage;
+    return 'https://wa.me/' + CONFIG.business.whatsappNumber + '?text=' + encodeURIComponent(msg);
+  }
+};
+
+/* ---------- 4. ORDER LIMITS (HIDDEN) ---------- */
+const OrderLimits = {
+  // Check if current time is within allowed ordering hours
+  // Allowed: before 8 AM OR after 4 PM (i.e. NOT between 8:00 AM and 3:59 PM)
+  isWithinOrderingHours(date) {
+    const d = date || new Date();
+    const minutesNow = d.getHours() * 60 + d.getMinutes();
+    // Strictly before 08:00 OR strictly after 16:00. Exactly 16:00 remains blocked.
+    return minutesNow < 8 * 60 || minutesNow > 16 * 60;
+  },
+  // Count orders placed today (by createdAt date)
+  getDailyOrderCount() {
+    const today = Utils.todayISO();
+    const orders = Storage.get(CONFIG.storage.orders, []);
+    return orders.filter(o => o.createdAt && o.createdAt.startsWith(today)).length;
+  },
+  hasReachedDailyLimit() {
+    return this.getDailyOrderCount() >= CONFIG.orderLimits.maxPerDay;
+  },
+  isQuantityValid(qty) {
+    const n = parseInt(qty, 10);
+    if (isNaN(n) || n < 1) return { valid: false, reason: 'invalid' };
+    if (!Number.isInteger(Number(qty))) return { valid: false, reason: 'decimal' };
+    if (n > CONFIG.product.stock) return { valid: false, reason: 'stock' };
+    if (n > CONFIG.orderLimits.maxQuantity) return { valid: false, reason: 'max' };
+    return { valid: true };
+  },
+  // Combined check used at submission time
+  canPlaceOrderNow() {
+    const errors = [];
+    if (!this.isWithinOrderingHours()) {
+      errors.push({
+        type: 'time',
+        message: 'Orders can only be placed before 8 AM or after 4 PM. Please try again during these hours.'
+      });
+    }
+    if (this.hasReachedDailyLimit()) {
+      errors.push({
+        type: 'daily',
+        message: 'Daily order limit reached. Please try again tomorrow.'
+      });
+    }
+    return { ok: errors.length === 0, errors };
+  }
+};
+
+/* ---------- 5. ORDER MANAGEMENT ---------- */
+const OrderManager = {
+  peekNextOrderId() {
+    const year = new Date().getFullYear();
+    let counterData = Storage.get(CONFIG.storage.counter, { year: year, count: 0 });
+    if (counterData.year !== year) {
+      counterData = { year: year, count: 0 };
+    }
+    const next = counterData.count + 1;
+    const padded = String(next).padStart(5, '0');
+    return 'DHIRIK-' + year + '-' + padded;
+  },
+  commitOrderId() {
+    const year = new Date().getFullYear();
+    let counterData = Storage.get(CONFIG.storage.counter, { year: year, count: 0 });
+    if (counterData.year !== year) {
+      counterData = { year: year, count: 0 };
+    }
+    counterData.count += 1;
+    Storage.set(CONFIG.storage.counter, counterData);
+  },
+  generateInvoiceNumber(orderSeq) {
+    // Derive invoice number from order sequence
+    return 'INV-' + orderSeq;
+  },
+  getAllOrders() {
+    return Storage.get(CONFIG.storage.orders, []);
+  },
+  getOrder(orderId) {
+    const orders = this.getAllOrders();
+    return orders.find(o => o.orderId === orderId) || null;
+  },
+  saveOrder(order) {
+    const orders = this.getAllOrders();
+    // Collision check on internal reference
+    if (orders.some(o => o.internalRef === order.internalRef)) {
+      order.internalRef = Utils.generateInternalRef();
+    }
+    orders.push(order);
+    const saved = Storage.set(CONFIG.storage.orders, orders);
+    return saved;
+  },
+  updateOrder(orderId, updates) {
+    const orders = this.getAllOrders();
+    const idx = orders.findIndex(o => o.orderId === orderId);
+    if (idx === -1) return false;
+    orders[idx] = Object.assign({}, orders[idx], updates);
+    return Storage.set(CONFIG.storage.orders, orders);
+  },
+  createOrder(formData) {
+    // Pre-flight hidden limit checks
+    const check = OrderLimits.canPlaceOrderNow();
+    if (!check.ok) {
+      return { success: false, errors: check.errors };
+    }
+    const qtyCheck = OrderLimits.isQuantityValid(formData.quantity);
+    if (!qtyCheck.valid) {
+      const errs = [];
+      if (qtyCheck.reason === 'max') {
+        errs.push({
+          type: 'qty-max',
+          message: 'Due to a single delivery agent, we can only deliver up to 20 packs per order. For bulk orders, please contact the admin directly through WhatsApp.',
+          showWhatsapp: true
+        });
+      } else if (qtyCheck.reason === 'stock') {
+        errs.push({ type: 'stock', message: 'Requested quantity exceeds available stock.' });
+      } else {
+        errs.push({ type: 'qty', message: 'Please enter a valid quantity (a positive whole number).' });
+      }
+      return { success: false, errors: errs };
+    }
+
+    const now = new Date();
+    const isoNow = now.toISOString();
+    const orderId = this.peekNextOrderId();
+    const seq = orderId.split('-').pop();
+    const invoiceNumber = this.generateInvoiceNumber(seq);
+
+    const qty = parseInt(formData.quantity, 10);
+    const unitPrice = CONFIG.product.unitPrice;
+    const subtotal = qty * unitPrice;
+    const deliveryCharge = 0; // no separate delivery fee; the component is included in the pack price
+    const deliveryDiscount = qty > 10 ? qty * CONFIG.pricing.deliveryCost : 0;
+    const grandTotal = subtotal - deliveryDiscount;
+
+    const order = {
+      orderId: orderId,
+      internalRef: Utils.generateInternalRef(),
+      customer: {
+        name: formData.name.trim(),
+        phone: Utils.normalizePhone(formData.phone),
+        email: formData.email.trim().toLowerCase()
+      },
+      deliveryAddress: CONFIG.business.deliveryAddress,
+      product: {
+        id: CONFIG.product.id,
+        name: CONFIG.product.name,
+        unitPrice: unitPrice
+      },
+      quantity: qty,
+      subtotal: subtotal,
+      deliveryCharge: deliveryCharge,
+      deliveryDiscount: deliveryDiscount,
+      pricingBreakdown: {
+        material: qty * CONFIG.pricing.materialPrice,
+        server: qty * CONFIG.pricing.serverCost,
+        database: qty * CONFIG.pricing.databaseCost,
+        deliveryComponent: qty * CONFIG.pricing.deliveryCost
+      },
+      grandTotal: grandTotal,
+      paymentMethod: CONFIG.payment.method,
+      createdAt: isoNow,
+      status: 'placed',
+      paymentStatus: 'pending',
+      deliveryStatus: 'pending',
+      termsAcceptance: {
+        accepted: true,
+        timestamp: isoNow,
+        version: CONFIG.terms.version,
+        text: CONFIG.terms.acceptanceText
+      },
+      invoice: {
+        number: invoiceNumber,
+        generatedAt: isoNow,
+        cancelled: false
+      },
+      notification: {
+        type: 'new_order',
+        status: 'pending', // pending | sent | failed
+        attempts: 0,
+        lastAttemptAt: null,
+        error: null
+      },
+      cancellation: null,
+      deliveryConfirmation: null,
+      timeline: [
+        { status: 'placed', label: 'Order Placed', timestamp: isoNow, note: 'Order placed by customer.' }
+      ]
+    };
+
+    // Save first, then commit counter
+    const saved = this.saveOrder(order);
+    if (!saved) {
+      return { success: false, errors: [{ type: 'storage', message: 'Unable to save your order. LocalStorage may be disabled or full.' }] };
+    }
+    this.commitOrderId();
+
+    // Save/update customer record
+    this.saveCustomer(order.customer, order.orderId);
+
+    // Notification is sent by handleSubmit(), which waits for the API result
+    // before displaying an order confirmation.
+    return { success: true, order };
+  },
+  saveCustomer(customer, orderId) {
+    const customers = Storage.get(CONFIG.storage.customers, {});
+    const key = customer.email;
+    if (!customers[key]) {
+      customers[key] = {
+        name: customer.name,
+        phone: customer.phone,
+        email: customer.email,
+        firstOrderAt: new Date().toISOString(),
+        orderIds: [orderId]
+      };
+    } else {
+      if (!customers[key].orderIds.includes(orderId)) {
+        customers[key].orderIds.push(orderId);
+      }
+      customers[key].name = customer.name;
+      customers[key].phone = customer.phone;
+    }
+    Storage.set(CONFIG.storage.customers, customers);
+  },
+  markAsReceived(orderId) {
+    const order = this.getOrder(orderId);
+    if (!order) return { success: false, error: 'Order not found.' };
+    if (order.status === CONFIG.cancelledKey) return { success: false, error: 'This order has been cancelled.' };
+    if (order.status === 'delivered') return { success: false, error: 'This order is already marked as delivered.' };
+
+    const isoNow = new Date().toISOString();
+    const updates = {
+      status: 'delivered',
+      deliveryStatus: 'delivered',
+      deliveryConfirmation: {
+        confirmedAt: isoNow,
+        method: 'customer_self_report',
+        note: 'Customer confirmed receipt. This delivery status is based on customer confirmation and has not been independently verified.'
+      },
+      timeline: (order.timeline || []).concat([
+        { status: 'delivered', label: 'Delivered', timestamp: isoNow, note: 'Customer confirmed receipt of the order.' }
+      ])
+    };
+    this.updateOrder(orderId, updates);
+    return { success: true };
+  },
+  canCancel(orderId) {
+    const order = this.getOrder(orderId);
+    if (!order) return { can: false, reason: 'Order not found.' };
+    if (order.status === CONFIG.cancelledKey) return { can: false, reason: 'This order has already been cancelled.' };
+    if (order.status === 'delivered') return { can: false, reason: 'Delivered orders cannot be cancelled.' };
+    return { can: true };
+  },
+  cancelOrder(orderId, reason) {
+    const check = this.canCancel(orderId);
+    if (!check.can) return { success: false, error: check.reason };
+
+    const order = this.getOrder(orderId);
+    const isoNow = new Date().toISOString();
+    const previousStatus = order.status;
+
+    const updates = {
+      status: CONFIG.cancelledKey,
+      previousStatus: previousStatus,
+      cancellation: {
+        cancelledAt: isoNow,
+        reason: reason || 'No reason provided.',
+        previousStatus: previousStatus,
+        notification: {
+          type: 'cancellation',
+          status: 'pending',
+          attempts: 0,
+          lastAttemptAt: null,
+          error: null
+        }
+      },
+      timeline: (order.timeline || []).concat([
+        { status: CONFIG.cancelledKey, label: 'Cancelled', timestamp: isoNow, note: 'Order cancelled by customer. Reason: ' + (reason || 'No reason provided.') }
+      ])
+    };
+    // Mark invoice as cancelled but keep data
+    if (order.invoice) {
+      updates.invoice = Object.assign({}, order.invoice, { cancelled: true, cancelledAt: isoNow });
+    }
+
+    this.updateOrder(orderId, updates);
+
+    // Send cancellation notification
+    const updatedOrder = this.getOrder(orderId);
+    NotificationService.sendCancellationNotification(updatedOrder);
+
+    return { success: true };
+  },
+  calculateDueDate(deliveryDate) {
+    if (!deliveryDate) return null;
+    const start = new Date(deliveryDate);
+    if (isNaN(start)) return null;
+    const due = new Date(start);
+    let workingDaysAdded = 0;
+    while (workingDaysAdded < CONFIG.payment.dueWorkingDays) {
+      due.setDate(due.getDate() + 1);
+      const day = due.getDay();
+      if (day !== 0 && day !== 6) { // Mon-Fri
+        workingDaysAdded++;
+      }
+    }
+    return due;
+  },
+  calculateInterest(outstandingAmount, dueDate) {
+    if (!dueDate || outstandingAmount <= 0) return 0;
+    const now = new Date();
+    const due = new Date(dueDate);
+    if (now <= due) return 0;
+    const elapsedDays = Math.floor((now - due) / (1000 * 60 * 60 * 24));
+    if (elapsedDays <= 0) return 0;
+    const interest = outstandingAmount * CONFIG.payment.interestMonthlyRate * (elapsedDays / 30);
+    return Math.round(interest * 100) / 100;
+  }
+};
+
+/* ---------- 6. INVOICE ---------- */
+const InvoiceManager = {
+  buildInvoiceHtml(order) {
+    if (!order) return '';
+    const dueDate = order.deliveryConfirmation
+      ? OrderManager.calculateDueDate(order.deliveryConfirmation.confirmedAt)
+      : null;
+    const dueDateStr = dueDate ? Utils.formatDate(dueDate) : 'Payment due date will be calculated after delivery confirmation.';
+    const cancelledStamp = order.invoice && order.invoice.cancelled
+      ? '<div class="inv-doc-cancelled-stamp">CANCELLED</div>'
+      : '';
+
+    return `
+      <div class="inv-doc-head">
+        <div class="inv-doc-brand">
+          <h1>Dhirik Chips</h1>
+          <p>Raha College, Raha, Nagaon, Assam — 782103</p>
+          <p>Email: ${Utils.escapeHtml(CONFIG.business.email)}</p>
+          <p>WhatsApp: ${Utils.escapeHtml(CONFIG.business.whatsappDisplay)}</p>
+        </div>
+        <div class="inv-doc-meta">
+          <h2>INVOICE</h2>
+          <p>Invoice No: <strong>${Utils.escapeHtml(order.invoice.number)}</strong></p>
+          <p>Order ID: ${Utils.escapeHtml(order.orderId)}</p>
+          <p>Date: ${Utils.formatDate(order.createdAt)}</p>
+          ${cancelledStamp}
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 18px;">
+        <div class="inv-doc-section">
+          <h3>Billed to</h3>
+          <p><strong>${Utils.escapeHtml(order.customer.name)}</strong></p>
+          <p>Phone: ${Utils.escapeHtml(order.customer.phone)}</p>
+          <p>Email: ${Utils.escapeHtml(order.customer.email)}</p>
+        </div>
+        <div class="inv-doc-section">
+          <h3>Delivery address</h3>
+          <p>${Utils.escapeHtml(order.deliveryAddress)}</p>
+        </div>
+      </div>
+
+      <table class="inv-doc-table">
+        <thead>
+          <tr><th>Product</th><th>Unit price</th><th>Qty</th><th style="text-align:right;">Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>${Utils.escapeHtml(order.product.name)}<br><small style="color:#9C8E80;">Transparent plastic packaging</small></td>
+            <td>${Utils.formatCurrency(order.product.unitPrice)}</td>
+            <td>${order.quantity}</td>
+            <td style="text-align:right;">${Utils.formatCurrency(order.subtotal)}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="inv-doc-totals">
+        <div class="row"><span>Material (${order.quantity} × ₹10)</span><span>${Utils.formatCurrency(order.pricingBreakdown ? order.pricingBreakdown.material : order.quantity * 10)}</span></div>
+        <div class="row"><span>Server cost (${order.quantity} × ₹3)</span><span>${Utils.formatCurrency(order.pricingBreakdown ? order.pricingBreakdown.server : order.quantity * 3)}</span></div>
+        <div class="row"><span>Database cost (${order.quantity} × ₹1)</span><span>${Utils.formatCurrency(order.pricingBreakdown ? order.pricingBreakdown.database : order.quantity)}</span></div>
+        <div class="row"><span>Delivery component (${order.quantity} × ₹1)</span><span>${Utils.formatCurrency(order.pricingBreakdown ? order.pricingBreakdown.deliveryComponent : order.quantity)}</span></div>
+        <div class="row"><span>Subtotal</span><span>${Utils.formatCurrency(order.subtotal)}</span></div>
+        ${order.deliveryDiscount ? '<div class="row" style="color:#1B6B3A;"><span>Bulk delivery discount</span><span>−' + Utils.formatCurrency(order.deliveryDiscount) + '</span></div>' : ''}
+        <div class="row"><span>Delivery payable</span><span>₹0</span></div>
+        <div class="row grand"><span>Grand total</span><span class="amt">${Utils.formatCurrency(order.grandTotal)}</span></div>
+      </div>
+
+      <div class="inv-doc-payment">
+        <strong>Payment method:</strong> Cash on Delivery (COD)<br>
+        <strong>Amount due:</strong> ${Utils.formatCurrency(order.grandTotal)}<br>
+        <strong>Payment due date:</strong> ${dueDateStr}<br>
+        ${dueDate ? '<strong>Late payment interest:</strong> 24% per month, prorated daily (Outstanding × 0.24 × elapsed days / 30). Interest applies only after the due date.' : ''}
+        ${order.deliveryConfirmation ? '<br><strong>Delivery confirmed on:</strong> ' + Utils.formatDate(order.deliveryConfirmation.confirmedAt) + ' (customer self-reported, not independently verified)' : ''}
+      </div>
+
+      <div class="inv-doc-section" style="margin-top:18px;">
+        <h3>Terms acceptance</h3>
+        <p>Accepted on ${Utils.formatDateTime(order.termsAcceptance.timestamp)} · Terms v${Utils.escapeHtml(order.termsAcceptance.version)}</p>
+      </div>
+
+      ${order.cancellation ? `
+        <div class="inv-doc-section" style="margin-top:18px; padding:12px; background:#FCF0F0; border-left:3px solid #A02020;">
+          <h3 style="color:#A02020;">Cancellation</h3>
+          <p>Cancelled on: ${Utils.formatDateTime(order.cancellation.cancelledAt)}</p>
+          <p>Reason: ${Utils.escapeHtml(order.cancellation.reason)}</p>
+          <p>Previous status: ${Utils.escapeHtml(order.cancellation.previousStatus)}</p>
+        </div>` : ''}
+
+      <div class="inv-doc-foot">
+        This is a computer-generated invoice from Dhirik Chips. Payment is due within 7 working days after delivery (Mon–Fri).
+        For queries, contact ${Utils.escapeHtml(CONFIG.business.email)} or WhatsApp ${Utils.escapeHtml(CONFIG.business.whatsappDisplay)}.
+      </div>
+    `;
+  },
+  viewInvoice(orderId) {
+    const order = OrderManager.getOrder(orderId);
+    if (!order) {
+      UI.toast('Order not found.', 'error');
+      return;
+    }
+    UI.showModal(`
+      <div class="modal-head">
+        <h3>Invoice — ${Utils.escapeHtml(order.invoice.number)}</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body" style="max-height:60vh; overflow-y:auto;">
+        <div style="font-size:12px;">${this.buildInvoiceHtml(order)}</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost btn-sm" data-close-modal>Close</button>
+        <button class="btn btn-ghost btn-sm" id="modalPrintInvoice">Print</button>
+        <button class="btn btn-primary btn-sm" id="modalDownloadInvoice">Download PDF</button>
+      </div>
+    `);
+    document.getElementById('modalPrintInvoice').onclick = () => this.printInvoice(orderId);
+    document.getElementById('modalDownloadInvoice').onclick = () => this.downloadInvoicePDF(orderId);
+  },
+  downloadInvoicePDF(orderId) {
+    const order = OrderManager.getOrder(orderId);
+    if (!order) {
+      UI.toast('Order not found.', 'error');
+      return;
+    }
+    const area = document.getElementById('invoice-print-area');
+    area.innerHTML = this.buildInvoiceHtml(order);
+
+    if (typeof html2pdf === 'undefined') {
+      UI.toast('PDF library not loaded. Using print fallback.', 'warning');
+      this.printInvoice(orderId);
+      return;
+    }
+    UI.toast('Generating PDF…', 'info');
+    const opt = {
+      margin: 10,
+      filename: 'Invoice-' + order.invoice.number + '-' + order.orderId + '.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(area).save().then(() => {
+      UI.toast('Invoice downloaded.', 'success');
+      area.innerHTML = '';
+    }).catch(err => {
+      console.error('PDF error', err);
+      UI.toast('PDF generation failed. Try Print → Save as PDF.', 'error');
+      this.printInvoice(orderId);
+    });
+  },
+  printInvoice(orderId) {
+    const order = OrderManager.getOrder(orderId);
+    if (!order) return;
+    const area = document.getElementById('invoice-print-area');
+    area.innerHTML = this.buildInvoiceHtml(order);
+    area.style.left = '0';
+    area.style.top = '0';
+    area.style.position = 'relative';
+    area.style.zIndex = '9999';
+    window.print();
+    // Restore off-screen position after print
+    setTimeout(() => {
+      area.style.left = '-9999px';
+      area.style.top = '0';
+      area.style.position = 'fixed';
+      area.style.zIndex = '';
+      area.innerHTML = '';
+    }, 500);
+  },
+  renderInvoiceList() {
+    const orders = OrderManager.getAllOrders().slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const container = document.getElementById('invoiceList');
+    if (orders.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h3>No invoices yet</h3>
+          <p>Once you place an order, its invoice will appear here.</p>
+          <div style="margin-top:16px;"><button class="btn btn-primary btn-sm" data-nav="order">Place an order</button></div>
+        </div>`;
+      return;
+    }
+    container.innerHTML = '<div class="invoice-list">' + orders.map(o => {
+      const statusLabel = o.status === CONFIG.cancelledKey ? 'CANCELLED' : (o.status === 'delivered' ? 'Paid/Delivered' : 'Pending');
+      return `
+        <div class="invoice-item">
+          <div class="invoice-item-info">
+            <div class="inv-no">${Utils.escapeHtml(o.invoice.number)}</div>
+            <div class="meta">Order ${Utils.escapeHtml(o.orderId)} · ${Utils.formatDate(o.createdAt)} · ${Utils.formatCurrency(o.grandTotal)} · ${statusLabel}</div>
+          </div>
+          <div class="invoice-item-actions">
+            <button class="btn btn-ghost btn-sm" data-invoice-view="${Utils.escapeHtml(o.orderId)}">View</button>
+            <button class="btn btn-ghost btn-sm" data-invoice-pdf="${Utils.escapeHtml(o.orderId)}">Download</button>
+            <button class="btn btn-ghost btn-sm" data-invoice-print="${Utils.escapeHtml(o.orderId)}">Print</button>
+          </div>
+        </div>`;
+    }).join('') + '</div>';
+  }
+};
+
+/* ---------- 7. NOTIFICATIONS (Web3Forms) ---------- */
+const NotificationService = {
+  async sendOrderNotification(order) {
+    // Update status to pending
+    OrderManager.updateOrder(order.orderId, {
+      notification: Object.assign({}, order.notification, { status: 'pending', lastAttemptAt: new Date().toISOString() })
+    });
+
+    const message = this.buildOrderMessage(order);
+    const formData = new FormData();
+    formData.append('access_key', CONFIG.api.newOrderKey);
+    formData.append('name', order.customer.name);
+    formData.append('email', order.customer.email);
+    formData.append('subject', 'New Dhirik Chips Order — ' + order.orderId);
+    formData.append('message', message);
+
+    try {
+      const res = await fetch(CONFIG.api.web3forms, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+      let data = {};
+      try { data = await res.json(); } catch (_) {}
+      if (res.ok && data.success === true) {
+        OrderManager.updateOrder(order.orderId, {
+          notification: { type: 'new_order', status: 'sent', attempts: 1, lastAttemptAt: new Date().toISOString(), error: null }
+        });
+        return { success: true };
+      } else {
+        const errMsg = (data.message || data.error || ('Web3Forms request failed (HTTP ' + res.status + ').'));
+        OrderManager.updateOrder(order.orderId, {
+          notification: { type: 'new_order', status: 'failed', attempts: 1, lastAttemptAt: new Date().toISOString(), error: errMsg }
+        });
+        return { success: false, error: errMsg };
+      }
+    } catch (err) {
+      OrderManager.updateOrder(order.orderId, {
+        notification: { type: 'new_order', status: 'failed', attempts: 1, lastAttemptAt: new Date().toISOString(), error: err.message || 'Network error' }
+      });
+      return { success: false, error: err.message || 'Network error' };
+    }
+  },
+  buildOrderMessage(order) {
+    return [
+      'NEW DHIRIK CHIPS ORDER',
+      '===============================',
+      '',
+      'Customer details:',
+      'Name: ' + order.customer.name,
+      'Phone: ' + order.customer.phone,
+      'Email: ' + order.customer.email,
+      '',
+      'Order details:',
+      'Order ID: ' + order.orderId,
+      'Invoice number: ' + order.invoice.number,
+      'Internal reference: ' + order.internalRef,
+      'Product: ' + order.product.name,
+      'Quantity: ' + order.quantity + ' pack(s)',
+      'Unit price: ₹' + order.product.unitPrice,
+      'Material: ₹' + (order.pricingBreakdown ? order.pricingBreakdown.material : order.quantity * 10),
+      'Server cost: ₹' + (order.pricingBreakdown ? order.pricingBreakdown.server : order.quantity * 3),
+      'Database cost: ₹' + (order.pricingBreakdown ? order.pricingBreakdown.database : order.quantity),
+      'Delivery component: ₹' + (order.pricingBreakdown ? order.pricingBreakdown.deliveryComponent : order.quantity),
+      'Subtotal: ₹' + order.subtotal,
+      'Bulk delivery discount: -₹' + (order.deliveryDiscount || 0),
+      'Delivery payable: ₹0',
+      'Grand total: ₹' + order.grandTotal,
+      '',
+      'Delivery address (fixed):',
+      order.deliveryAddress,
+      '',
+      'Payment method: Cash on Delivery (COD)',
+      'Order placed at: ' + Utils.formatDateTime(order.createdAt),
+      '',
+      'Terms acceptance:',
+      'Accepted: ' + (order.termsAcceptance.accepted ? 'Yes' : 'No'),
+      'Timestamp: ' + Utils.formatDateTime(order.termsAcceptance.timestamp),
+      'Terms version: ' + order.termsAcceptance.version,
+      '',
+      'Invoice number: ' + order.invoice.number,
+      '',
+      '— This notification was sent automatically by the Dhirik Chips ordering system.'
+    ].join('\n');
+  },
+  async sendCancellationNotification(order) {
+    if (!order.cancellation) return;
+    // Update cancellation notification status
+    const updatedCancellation = Object.assign({}, order.cancellation, {
+      notification: { type: 'cancellation', status: 'pending', attempts: 0, lastAttemptAt: new Date().toISOString(), error: null }
+    });
+    OrderManager.updateOrder(order.orderId, { cancellation: updatedCancellation });
+
+    const message = this.buildCancellationMessage(order);
+    const formData = new FormData();
+    formData.append('access_key', CONFIG.api.cancelOrderKey);
+    formData.append('name', order.customer.name);
+    formData.append('email', order.customer.email);
+    formData.append('subject', 'Dhirik Chips Order CANCELLED — ' + order.orderId);
+    formData.append('message', message);
+
+    try {
+      const res = await fetch(CONFIG.api.web3forms, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+      let data = {};
+      try { data = await res.json(); } catch (_) {}
+      const sent = res.ok && data.success === true;
+      const status = sent ? 'sent' : 'failed';
+      const err = sent ? null : (data.message || data.error || ('Web3Forms request failed (HTTP ' + res.status + ').'));
+      const finalCancel = Object.assign({}, order.cancellation, {
+        notification: { type: 'cancellation', status: status, attempts: 1, lastAttemptAt: new Date().toISOString(), error: err }
+      });
+      OrderManager.updateOrder(order.orderId, { cancellation: finalCancel });
+      return { success: sent, error: err };
+    } catch (err) {
+      const finalCancel = Object.assign({}, order.cancellation, {
+        notification: { type: 'cancellation', status: 'failed', attempts: 1, lastAttemptAt: new Date().toISOString(), error: err.message || 'Network error' }
+      });
+      OrderManager.updateOrder(order.orderId, { cancellation: finalCancel });
+      return { success: false, error: err.message };
+    }
+  },
+  buildCancellationMessage(order) {
+    const c = order.cancellation;
+    return [
+      'DHIRIK CHIPS — ORDER CANCELLATION',
+      '===============================',
+      '',
+      'Customer details:',
+      'Name: ' + order.customer.name,
+      'Phone: ' + order.customer.phone,
+      'Email: ' + order.customer.email,
+      '',
+      'Cancellation details:',
+      'Order ID: ' + order.orderId,
+      'Product cancelled: ' + order.product.name,
+      'Quantity: ' + order.quantity + ' pack(s)',
+      'Invoice total: ₹' + order.grandTotal,
+      'Cancellation reason: ' + c.reason,
+      'Cancelled at: ' + Utils.formatDateTime(c.cancelledAt),
+      'Previous status: ' + c.previousStatus,
+      'New status: CANCELLED',
+      '',
+      '— This cancellation notification was sent automatically by the Dhirik Chips ordering system.'
+    ].join('\n');
+  },
+  async retryNotification(orderId) {
+    const order = OrderManager.getOrder(orderId);
+    if (!order) return;
+    // Determine which notification to retry
+    if (order.cancellation && order.cancellation.notification && order.cancellation.notification.status === 'failed') {
+      UI.toast('Retrying cancellation notification…', 'info');
+      const result = await this.sendCancellationNotification(order);
+      if (result.success) {
+        UI.toast('Cancellation notification sent successfully.', 'success');
+      } else {
+        UI.toast('Failed to send cancellation notification: ' + result.error, 'error');
+      }
+    } else if (order.notification && order.notification.status === 'failed') {
+      UI.toast('Retrying order notification…', 'info');
+      const result = await this.sendOrderNotification(order);
+      if (result.success) {
+        UI.toast('Order notification sent successfully.', 'success');
+      } else {
+        UI.toast('Failed to send order notification: ' + result.error, 'error');
+      }
+    } else {
+      UI.toast('No pending failed notifications for this order.', 'info');
+    }
+    UI.renderOrders();
+  }
+};
+
+/* ---------- 8. UI ---------- */
+const UI = {
+  currentSection: 'home',
+  toast(message, type) {
+    type = type || 'info';
+    const container = document.getElementById('toast-container');
+    const el = document.createElement('div');
+    el.className = 'toast ' + type;
+    const span = document.createElement('span');
+    span.textContent = message; // safe text insertion
+    el.appendChild(span);
+    const close = document.createElement('span');
+    close.className = 'toast-close';
+    close.textContent = '×';
+    close.onclick = () => el.remove();
+    el.appendChild(close);
+    container.appendChild(el);
+    setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateX(40px)'; setTimeout(() => el.remove(), 300); }, 5000);
+  },
+  showModal(htmlContent) {
+    this.closeModal();
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.id = 'modalOverlay';
+    overlay.innerHTML = '<div class="modal">' + htmlContent + '</div>';
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) this.closeModal();
+    });
+    overlay.querySelectorAll('[data-close-modal]').forEach(b => {
+      b.onclick = () => this.closeModal();
+    });
+    return overlay;
+  },
+  closeModal() {
+    const existing = document.getElementById('modalOverlay');
+    if (existing) existing.remove();
+  },
+  showSection(id) {
+    const sections = document.querySelectorAll('main > section');
+    sections.forEach(s => {
+      if (s.id === id) {
+        s.classList.remove('hidden');
+      } else {
+        // Hide all except home (home is always visible at top, others are toggled)
+        // Actually we want single-section navigation
+        if (s.id !== 'home') {
+          s.classList.add('hidden');
+        }
+      }
+    });
+    // For "home", we also want to show hero — but hide all others
+    const homeSection = document.getElementById('home');
+    if (id !== 'home') {
+      homeSection.classList.add('hidden');
+    } else {
+      homeSection.classList.remove('hidden');
+    }
+    // Show the target
+    const target = document.getElementById(id);
+    if (target) target.classList.remove('hidden');
+
+    // Update nav active state
+    document.querySelectorAll('.nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('data-nav') === id);
+    });
+    // Close mobile nav
+    document.getElementById('mainNav').classList.remove('open');
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.currentSection = id;
+
+    // Refresh data on relevant sections
+    if (id === 'orders') this.renderOrders();
+    if (id === 'invoices') InvoiceManager.renderInvoiceList();
+  },
+  renderOrders() {
+    const search = (document.getElementById('orderSearch').value || '').toLowerCase().trim();
+    const filter = document.getElementById('orderFilter').value;
+    let orders = OrderManager.getAllOrders();
+    if (search) {
+      orders = orders.filter(o =>
+        o.orderId.toLowerCase().includes(search) ||
+        o.customer.name.toLowerCase().includes(search)
+      );
+    }
+    if (filter !== 'all') {
+      orders = orders.filter(o => {
+        if (filter === 'cancelled') return o.status === CONFIG.cancelledKey;
+        if (filter === 'delivered') return o.status === 'delivered';
+        if (filter === 'placed') return o.status === 'placed';
+        return true;
+      });
+    }
+    orders.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    const container = document.getElementById('ordersList');
+    if (orders.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <h3>No orders found</h3>
+          <p>${search || filter !== 'all' ? 'Try a different search or filter.' : 'Orders placed from this browser will appear here.'}</p>
+          ${(!search && filter === 'all') ? '<div style="margin-top:16px;"><button class="btn btn-primary btn-sm" data-nav="order">Place your first order</button></div>' : ''}
+        </div>`;
+      return;
+    }
+    container.innerHTML = '<div class="orders-list">' + orders.map(o => this.orderItemHtml(o)).join('') + '</div>';
+  },
+  orderItemHtml(o) {
+    const statusInfo = this.getStatusInfo(o.status);
+    let actions = `
+      <button class="btn btn-ghost btn-sm" data-track="${Utils.escapeHtml(o.orderId)}">Track</button>
+      <button class="btn btn-ghost btn-sm" data-invoice-view="${Utils.escapeHtml(o.orderId)}">Invoice</button>
+    `;
+    // Cancel button (only if placed)
+    const cancelCheck = OrderManager.canCancel(o.orderId);
+    if (cancelCheck.can) {
+      actions += `<button class="btn btn-ghost btn-sm" data-cancel="${Utils.escapeHtml(o.orderId)}" style="color: var(--color-error);">Cancel</button>`;
+    }
+    // Mark as received (if placed and not delivered/cancelled)
+    if (o.status === 'placed') {
+      actions += `<button class="btn btn-primary btn-sm" data-received="${Utils.escapeHtml(o.orderId)}">Mark as Received</button>`;
+    }
+    // Retry notification
+    const hasFailedNotif = (o.notification && o.notification.status === 'failed') ||
+      (o.cancellation && o.cancellation.notification && o.cancellation.notification.status === 'failed');
+    if (hasFailedNotif) {
+      actions += `<button class="btn btn-ghost btn-sm" data-retry-notif="${Utils.escapeHtml(o.orderId)}" style="color: var(--color-warning);">Retry Notification</button>`;
+    }
+    // Notification status badge
+    let notifBadge = '';
+    if (o.notification) {
+      if (o.notification.status === 'sent') notifBadge = '<span class="status-badge status-delivered" style="margin-left:6px;"><span class="dot"></span>Email sent</span>';
+      else if (o.notification.status === 'failed') notifBadge = '<span class="status-badge status-cancelled" style="margin-left:6px;"><span class="dot"></span>Email failed</span>';
+      else if (o.notification.status === 'pending') notifBadge = '<span class="status-badge status-preparing" style="margin-left:6px;"><span class="dot"></span>Sending…</span>';
+    }
+    return `
+      <div class="order-item">
+        <div class="order-item-head">
+          <div>
+            <div class="order-item-id">${Utils.escapeHtml(o.orderId)}</div>
+            <div class="order-item-date">${Utils.formatDateTime(o.createdAt)}</div>
+          </div>
+          <span class="status-badge status-${o.status}"><span class="dot"></span>${Utils.escapeHtml(statusInfo.label)}</span>
+        </div>
+        <div class="order-item-body">
+          <div class="order-item-meta">
+            ${Utils.escapeHtml(o.customer.name)} · ${o.quantity} pack(s) · <strong>${Utils.formatCurrency(o.grandTotal)}</strong> · COD
+            ${notifBadge}
+          </div>
+          <div class="order-item-actions">${actions}</div>
+        </div>
+      </div>`;
+  },
+  getStatusInfo(key) {
+    if (key === CONFIG.cancelledKey) return { key: 'cancelled', label: 'Cancelled', order: 0 };
+    const s = CONFIG.statuses.find(st => st.key === key);
+    return s || { key: key, label: key, order: 0 };
+  },
+  renderTracking(orderId) {
+    const order = OrderManager.getOrder(orderId);
+    const container = document.getElementById('trackingResult');
+    if (!order) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <h3>Order not found</h3>
+          <p>We couldn't find an order with that ID in this browser. Double-check the Order ID, or place a new order.</p>
+        </div>`;
+      return;
+    }
+    // Build timeline
+    const timelineHtml = CONFIG.statuses.map(st => {
+      const tlEntry = (order.timeline || []).find(t => t.status === st.key);
+      const isCurrent = order.status === st.key;
+      const isDone = tlEntry || (this.getStatusInfo(order.status).order > st.order && order.status !== CONFIG.cancelledKey);
+      let cls = '';
+      if (order.status === CONFIG.cancelledKey) {
+        cls = st.order <= 1 ? 'done' : 'pending';
+      } else if (isCurrent) cls = 'current';
+      else if (isDone) cls = 'done';
+      else cls = 'pending';
+      return `
+        <div class="timeline-step ${cls}">
+          <h4>${Utils.escapeHtml(st.label)}</h4>
+          ${tlEntry ? '<div class="time">' + Utils.formatDateTime(tlEntry.timestamp) + '</div>' : ''}
+          ${tlEntry && tlEntry.note ? '<div class="note">' + Utils.escapeHtml(tlEntry.note) + '</div>' : ''}
+        </div>`;
+    }).join('');
+
+    const cancelEntry = order.status === CONFIG.cancelledKey ? `
+      <div class="timeline-step cancelled">
+        <h4>Cancelled</h4>
+        ${order.cancellation ? '<div class="time">' + Utils.formatDateTime(order.cancellation.cancelledAt) + '</div>' : ''}
+        ${order.cancellation && order.cancellation.reason ? '<div class="note">Reason: ' + Utils.escapeHtml(order.cancellation.reason) + '</div>' : ''}
+      </div>` : '';
+
+    // Actions
+    let actionsHtml = '';
+    if (order.status === 'placed') {
+      actionsHtml += `<button class="btn btn-primary btn-sm" data-received="${Utils.escapeHtml(order.orderId)}">Mark as Received</button>`;
+    }
+    if (OrderManager.canCancel(order.orderId).can) {
+      actionsHtml += `<button class="btn btn-danger btn-sm" data-cancel="${Utils.escapeHtml(order.orderId)}">Cancel Order</button>`;
+    }
+    actionsHtml += `<button class="btn btn-ghost btn-sm" data-invoice-view="${Utils.escapeHtml(order.orderId)}">View Invoice</button>`;
+    actionsHtml += `<button class="btn btn-ghost btn-sm" data-nav="orders">Back to My Orders</button>`;
+
+    // Delivery confirmation note
+    const deliveryNote = order.deliveryConfirmation
+      ? `<div style="margin-top:16px; padding:12px; background: var(--color-success-bg); border-left: 3px solid var(--color-success); border-radius: var(--radius-sm); font-size: 13px;">
+           <strong>Your order may have been delivered successfully according to your confirmation.</strong><br>
+           This delivery status is based on your confirmation and has not been independently verified.
+         </div>`
+      : (order.status === 'placed' ? `<div style="margin-top:16px; padding:12px; background: var(--color-info-bg); border-left: 3px solid var(--color-info); border-radius: var(--radius-sm); font-size: 13px;">
+           Once you receive your order, tap "Mark as Received" to confirm delivery. The payment due date will be calculated from that confirmation.
+         </div>` : '');
+
+    // Payment due info
+    let paymentInfo = '';
+    if (order.deliveryConfirmation) {
+      const dueDate = OrderManager.calculateDueDate(order.deliveryConfirmation.confirmedAt);
+      const interest = OrderManager.calculateInterest(order.grandTotal, dueDate);
+      paymentInfo = `
+        <div style="margin-top:12px; font-size:13px; color: var(--color-text-muted);">
+          <strong>Payment due date:</strong> ${Utils.formatDate(dueDate)} (7 working days after delivery)<br>
+          ${interest > 0 ? '<strong style="color:var(--color-error);">Late interest accrued:</strong> ' + Utils.formatCurrency(interest) + ' (24%/month prorated)' : '<strong style="color:var(--color-success);">No late interest — payment not yet overdue.</strong>'}
+        </div>`;
+    } else {
+      paymentInfo = `<div style="margin-top:12px; font-size:13px; color: var(--color-text-muted);"><strong>Payment due date:</strong> Payment due date will be calculated after delivery confirmation.</div>`;
+    }
+
+    container.innerHTML = `
+      <div class="tracking-info-card">
+        <div class="tracking-info-head">
+          <div>
+            <strong style="font-family: var(--font-display);">${Utils.escapeHtml(order.orderId)}</strong>
+            <div style="font-size:12px; color: var(--color-text-light-dim);">${Utils.formatDateTime(order.createdAt)}</div>
+          </div>
+          <span class="status-badge status-${order.status}"><span class="dot"></span>${Utils.escapeHtml(this.getStatusInfo(order.status).label)}</span>
+        </div>
+        <div class="tracking-info-body">
+          <dl>
+            <div><dt>Customer</dt><dd>${Utils.escapeHtml(order.customer.name)}</dd></div>
+            <div><dt>Quantity</dt><dd>${order.quantity} pack(s)</dd></div>
+            <div><dt>Grand total</dt><dd>${Utils.formatCurrency(order.grandTotal)}</dd></div>
+            <div><dt>Payment</dt><dd>COD</dd></div>
+          </dl>
+          ${paymentInfo}
+          ${deliveryNote}
+        </div>
+      </div>
+      <div class="timeline" style="margin-top:32px;">
+        ${timelineHtml}
+        ${cancelEntry}
+      </div>
+      <div style="max-width:640px; margin: var(--space-6) auto 0; display:flex; flex-wrap:wrap; gap: var(--space-2);">
+        ${actionsHtml}
+      </div>
+      <div style="max-width:640px; margin: 16px auto 0; font-size: 12px; color: var(--color-text-dim); text-align:center;">
+        Note: In this system, only "Order Placed", "Delivered" (after your confirmation), and "Cancelled" are tracked locally.
+        Intermediate statuses (Confirmed, Preparing, Ready, Out for Delivery) would be updated by the seller in a live system.
+      </div>
+    `;
+  },
+  renderLimitations() {
+    const items = [
+      { title: 'LocalStorage is not a secure database', body: 'All order data is stored in your browser\'s LocalStorage. It can be read or cleared by anyone with access to your device. Do not store sensitive information.' },
+      { title: 'Orders exist only on this browser/device', body: 'Orders placed here are visible only in the browser and device where they were created. They do not sync across devices, browsers, or users.' },
+      { title: 'Order IDs are sequential, not globally unique', body: 'Order IDs (DHIRIK-2026-00001) use a local counter. They are unique within this browser only, not across all Dhirik Chips customers.' },
+      { title: 'Embedded API key is publicly visible', body: 'The Web3Forms access key used to send order/cancellation emails is embedded in this page and can be viewed in the page source. It can only send emails to the configured inbox and cannot be used to read or modify data.' },
+      { title: 'Email delivery is best-effort', body: 'Order and cancellation email notifications are sent via Web3Forms. If the network or service is unavailable, the notification may fail. Failed notifications can be retried from "My Orders". The order itself is saved locally regardless of email status.' },
+      { title: 'Delivery status is self-reported', body: 'Delivery is only recorded when you confirm receipt. This confirmation has not been independently verified by Dhirik Chips and is your own acknowledgement.' },
+      { title: 'Time-based ordering uses your device clock', body: 'Ordering time checks (before 8 AM / after 4 PM) rely on your device\'s local clock. If your device clock is wrong, the check may behave unexpectedly.' },
+      { title: 'No card or password storage', body: 'This site does not collect or store credit card numbers, passwords, or other sensitive financial data. Payment is strictly Cash on Delivery.' },
+      { title: 'XSS-protected but client-side only', body: 'User-entered content is displayed using safe text insertion (not raw HTML). However, all logic runs in your browser — there is no server-side enforcement.' },
+      { title: 'Single delivery agent & location', body: 'Delivery is handled by a single agent to Raha College only. Large orders or other locations are not supported through this site.' }
+    ];
+    const container = document.getElementById('limitationsList');
+    container.innerHTML = items.map((it, i) => `
+      <div class="limitation-item">
+        <span class="num">${i + 1}</span><strong>${Utils.escapeHtml(it.title)}</strong>
+        <p>${Utils.escapeHtml(it.body)}</p>
+      </div>`).join('');
+  },
+  showTechnicalCancellation(order) {
+    this.showSection('order');
+    this.showModal(`
+      <div class="modal-head">
+        <h3>Order cancelled</h3>
+        <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="toast error" style="position:static; margin-bottom:16px;">
+          <strong>Order cancelled due to some technical issues.</strong>
+          <div style="margin-top:6px;">We could not submit the order notification successfully, so your order was not accepted. Please try placing your order again later.</div>
+        </div>
+        <p><strong>Order ID:</strong> ${Utils.escapeHtml(order.orderId)}</p>
+        <p><strong>Status:</strong> CANCELLED</p>
+        <p><strong>Amount:</strong> ${Utils.formatCurrency(order.grandTotal)}</p>
+        <p style="font-size:13px; color:var(--color-text-muted); margin-top:12px;">You will not be charged for this cancelled COD order.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-close-modal>Close</button>
+      </div>
+    `);
+  },
+  showConfirmation(order) {
+    document.getElementById('confirmOrderId').textContent = order.orderId;
+    const details = document.getElementById('confirmDetails');
+    details.innerHTML = '';
+    const lines = [
+      'Product: ' + order.product.name,
+      'Quantity: ' + order.quantity + ' pack(s)',
+      'Grand total: ' + Utils.formatCurrency(order.grandTotal),
+      'Payment: Cash on Delivery (due within 7 working days after delivery)',
+      'Delivery to: ' + order.deliveryAddress,
+      'Placed at: ' + Utils.formatDateTime(order.createdAt)
+    ];
+    const ul = document.createElement('ul');
+    ul.style.paddingLeft = '20px';
+    lines.forEach(l => {
+      const li = document.createElement('li');
+      li.style.marginBottom = '4px';
+      li.textContent = l;
+      ul.appendChild(li);
+    });
+    details.appendChild(ul);
+
+    // Notification status
+    const notifEl = document.getElementById('confirmNotification');
+    if (order.notification && order.notification.status === 'sent') {
+      notifEl.innerHTML = '<div class="toast success" style="position:static; border-left-color: var(--color-success);"><span>A confirmation email has been sent to ' + Utils.escapeHtml(order.customer.email) + '.</span></div>';
+    } else if (order.notification && order.notification.status === 'failed') {
+      notifEl.innerHTML = '<div class="toast error" style="position:static;"><span>The confirmation email could not be sent, but your order is saved. You can retry from "My Orders".</span></div>';
+    } else {
+      notifEl.innerHTML = '<div class="toast info" style="position:static;"><span>Sending confirmation email… You can check the status in "My Orders".</span></div>';
+    }
+
+    // Store the order ID for the confirm actions
+    document.getElementById('confirmViewInvoice').dataset.orderId = order.orderId;
+    document.getElementById('confirmDownloadInvoice').dataset.orderId = order.orderId;
+    document.getElementById('confirmTrack').dataset.trackId = order.orderId;
+
+    this.showSection('confirmation');
+  }
+};
+
+/* ---------- 9. FORM HANDLING ---------- */
+const FormHandler = {
+  init() {
+    const form = document.getElementById('orderForm');
+    const qtyInput = document.getElementById('qtyInput');
+    const qtyMinus = document.getElementById('qtyMinus');
+    const qtyPlus = document.getElementById('qtyPlus');
+
+    // Quantity controls
+    qtyMinus.addEventListener('click', () => {
+      let v = parseInt(qtyInput.value, 10) || 1;
+      if (v > 1) qtyInput.value = v - 1;
+      this.updateSummary();
+    });
+    qtyPlus.addEventListener('click', () => {
+      let v = parseInt(qtyInput.value, 10) || 0;
+      v += 1;
+      qtyInput.value = v;
+      this.updateSummary();
+      // Soft-warn if above max, but only hard-block on submit
+      const check = OrderLimits.isQuantityValid(v);
+      const errMax = document.getElementById('errQtyMax');
+      if (!check.valid && check.reason === 'max') {
+        errMax.textContent = 'Bulk orders (more than 20 packs) require direct contact. A WhatsApp button will appear if you try to place this order.';
+        errMax.style.display = 'block';
+        errMax.style.color = 'var(--color-warning)';
+      } else {
+        errMax.style.display = 'none';
+      }
+    });
+    qtyInput.addEventListener('input', () => {
+      this.updateSummary();
+      const v = parseInt(qtyInput.value, 10);
+      const errMax = document.getElementById('errQtyMax');
+      if (!isNaN(v) && v > CONFIG.orderLimits.maxQuantity) {
+        errMax.textContent = 'Bulk orders (more than 20 packs) require direct contact. A WhatsApp button will appear if you try to place this order.';
+        errMax.style.display = 'block';
+        errMax.style.color = 'var(--color-warning)';
+      } else {
+        errMax.style.display = 'none';
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.handleSubmit();
+    });
+
+    this.updateSummary();
+  },
+  updateSummary() {
+    const qty = parseInt(document.getElementById('qtyInput').value, 10) || 0;
+    const subtotal = qty * CONFIG.product.unitPrice;
+    const material = qty * CONFIG.pricing.materialPrice;
+    const server = qty * CONFIG.pricing.serverCost;
+    const database = qty * CONFIG.pricing.databaseCost;
+    const deliveryComponent = qty * CONFIG.pricing.deliveryCost;
+    const discount = qty > 10 ? deliveryComponent : 0;
+    const total = subtotal - discount;
+    document.getElementById('sumQty').textContent = qty;
+    document.getElementById('sumMaterial').textContent = Utils.formatCurrency(material);
+    document.getElementById('sumServer').textContent = Utils.formatCurrency(server);
+    document.getElementById('sumDatabase').textContent = Utils.formatCurrency(database);
+    document.getElementById('sumDelivery').textContent = Utils.formatCurrency(deliveryComponent);
+    document.getElementById('sumSubtotal').textContent = Utils.formatCurrency(subtotal);
+    document.getElementById('sumDiscount').textContent = '−' + Utils.formatCurrency(discount);
+    document.getElementById('bulkDiscountRow').style.display = discount > 0 ? 'flex' : 'none';
+    document.getElementById('sumDeliveryPayable').textContent = '₹0';
+    document.getElementById('sumTotal').textContent = Utils.formatCurrency(total);
+    document.getElementById('bulkDiscountHint').textContent = discount > 0
+      ? 'Bulk discount applied: ₹1 off each of your ' + qty + ' packs (₹' + discount + ' total). This discount applies to this order only.'
+      : 'Order more than 10 packs to receive a ₹1-per-pack delivery-component discount on this order.';
+  },
+  validate() {
+    let valid = true;
+    const name = document.getElementById('custName');
+    const phone = document.getElementById('custPhone');
+    const email = document.getElementById('custEmail');
+    const qty = document.getElementById('qtyInput');
+    const terms = document.getElementById('termsAgree');
+
+    // Name
+    if (!name.value.trim()) {
+      name.classList.add('error');
+      document.getElementById('errName').classList.add('show');
+      valid = false;
+    } else {
+      name.classList.remove('error');
+      document.getElementById('errName').classList.remove('show');
+    }
+
+    // Phone
+    if (!Utils.isValidPhone(phone.value)) {
+      phone.classList.add('error');
+      document.getElementById('errPhone').classList.add('show');
+      valid = false;
+    } else {
+      phone.classList.remove('error');
+      document.getElementById('errPhone').classList.remove('show');
+    }
+
+    // Email
+    if (!Utils.isValidEmail(email.value, name.value)) {
+      email.classList.add('error');
+      document.getElementById('errEmail').classList.add('show');
+      valid = false;
+    } else {
+      email.classList.remove('error');
+      document.getElementById('errEmail').classList.remove('show');
+    }
+
+    // Quantity basic
+    const qtyVal = parseInt(qty.value, 10);
+    if (isNaN(qtyVal) || qtyVal < 1 || !Number.isInteger(Number(qty.value))) {
+      qty.classList.add('error');
+      document.getElementById('errQty').classList.add('show');
+      valid = false;
+    } else {
+      qty.classList.remove('error');
+      document.getElementById('errQty').classList.remove('show');
+    }
+
+    // Terms
+    if (!terms.checked) {
+      document.getElementById('errTerms').classList.add('show');
+      valid = false;
+    } else {
+      document.getElementById('errTerms').classList.remove('show');
+    }
+
+    return valid;
+  },
+  async handleSubmit() {
+    // Clear previous max-qty error display
+    document.getElementById('errQtyMax').style.display = 'none';
+
+    if (!this.validate()) {
+      UI.toast('Please fix the errors in the form.', 'error');
+      return;
+    }
+
+    const formData = {
+      name: document.getElementById('custName').value,
+      phone: document.getElementById('custPhone').value,
+      email: document.getElementById('custEmail').value,
+      quantity: document.getElementById('qtyInput').value
+    };
+
+    const btn = document.getElementById('submitOrderBtn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting order…';
+
+    try {
+      const result = OrderManager.createOrder(formData);
+      if (!result.success) {
+        const firstErr = result.errors[0];
+        if (firstErr.showWhatsapp) this.showBulkOrderModal(firstErr.message);
+        else UI.toast(firstErr.message, 'error');
+        return;
+      }
+
+      // Do not tell the customer that the order is placed until Web3Forms confirms success.
+      const mailResult = await NotificationService.sendOrderNotification(result.order);
+      if (!mailResult.success) {
+        const cancelResult = OrderManager.cancelOrder(result.order.orderId,
+          'Automatically cancelled because the order notification could not be submitted due to a technical issue.');
+        const cancelledOrder = OrderManager.getOrder(result.order.orderId) || result.order;
+        document.getElementById('orderForm').reset();
+        document.getElementById('qtyInput').value = 1;
+        this.updateSummary();
+        UI.renderOrders();
+        UI.showTechnicalCancellation(cancelledOrder);
+        return;
+      }
+
+      const confirmedOrder = OrderManager.getOrder(result.order.orderId) || result.order;
+      UI.showConfirmation(confirmedOrder);
+      UI.toast('Your order has been placed successfully!', 'success');
+      document.getElementById('orderForm').reset();
+      document.getElementById('qtyInput').value = 1;
+      this.updateSummary();
+    } catch (err) {
+      console.error('Order submission error:', err);
+      UI.toast('Order could not be processed due to a technical issue. Please try again.', 'error');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Place order — Cash on Delivery';
+    }
+  },
+  showBulkOrderModal(message) {
+    UI.showModal(`
+      <div class="modal-head">
+        <h3>Bulk order?</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>${Utils.escapeHtml(message)}</p>
+        <div style="margin-top: 16px; padding: 14px; background: var(--bg-soft); border-radius: var(--radius-sm); font-size: 14px;">
+          <strong>Contact the admin on WhatsApp:</strong><br>
+          ${Utils.escapeHtml(CONFIG.business.whatsappDisplay)}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-close-modal>Close</button>
+        <a class="btn btn-whatsapp" id="bulkWhatsappLink" href="${Utils.whatsappUrl()}" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.608.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    `);
+  },
+  showCancelModal(orderId) {
+    UI.showModal(`
+      <div class="modal-head">
+        <h3>Cancel this order?</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>You can only cancel while the order status is "Order Placed". The original invoice will be retained but marked as cancelled. A cancellation notification will be sent.</p>
+        <div class="form-group" style="margin-top: 16px;">
+          <label for="cancelReason">Reason (optional)</label>
+          <textarea id="cancelReason" class="form-control" rows="3" placeholder="Tell us why you're cancelling (optional)…"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-close-modal>Keep order</button>
+        <button class="btn btn-danger" id="confirmCancelBtn">Yes, cancel order</button>
+      </div>
+    `);
+    document.getElementById('confirmCancelBtn').onclick = () => {
+      const reason = document.getElementById('cancelReason').value.trim();
+      const result = OrderManager.cancelOrder(orderId, reason);
+      UI.closeModal();
+      if (result.success) {
+        UI.toast('Order has been cancelled. Cancellation email is being sent.', 'success');
+        UI.renderOrders();
+        if (UI.currentSection === 'tracking') UI.renderTracking(orderId);
+      } else {
+        UI.toast(result.error || 'Could not cancel this order.', 'error');
+      }
+    };
+  },
+  showReceivedModal(orderId) {
+    UI.showModal(`
+      <div class="modal-head">
+        <h3>Confirm delivery</h3>
+        <button class="modal-close" data-close-modal>&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Have you received your Dhirik Chips order?</p>
+        <p style="font-size: 12px; color: var(--color-text-dim);">After confirmation, your order status will be updated to "Delivered" and the payment due date (7 working days from today) will be calculated.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" data-close-modal>Not Yet</button>
+        <button class="btn btn-primary" id="confirmReceivedBtn">Yes, Received</button>
+      </div>
+    `);
+    document.getElementById('confirmReceivedBtn').onclick = () => {
+      const result = OrderManager.markAsReceived(orderId);
+      UI.closeModal();
+      if (result.success) {
+        UI.toast('Your order may have been delivered successfully according to your confirmation.', 'success');
+        UI.renderOrders();
+        if (UI.currentSection === 'tracking') UI.renderTracking(orderId);
+      } else {
+        UI.toast(result.error || 'Could not update delivery status.', 'error');
+      }
+    };
+  }
+};
+
+/* ---------- 10. INIT ---------- */
+const App = {
+  init() {
+    // Footer year
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // WhatsApp FAB
+    document.getElementById('whatsappFab').href = Utils.whatsappUrl();
+
+    // Nav
+    document.querySelectorAll('[data-nav]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = el.getAttribute('data-nav');
+        UI.showSection(target);
+      });
+    });
+
+    // Mobile nav toggle
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+
+    // Form
+    FormHandler.init();
+
+    // Search & filter
+    document.getElementById('orderSearch').addEventListener('input', () => UI.renderOrders());
+    document.getElementById('orderFilter').addEventListener('change', () => UI.renderOrders());
+
+    // Track button
+    document.getElementById('trackBtn').addEventListener('click', () => {
+      const id = document.getElementById('trackInput').value.trim();
+      if (!id) {
+        UI.toast('Please enter an Order ID.', 'error');
+        return;
+      }
+      UI.renderTracking(id);
+    });
+    document.getElementById('trackInput').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') document.getElementById('trackBtn').click();
+    });
+
+    // Delegated clicks for dynamic buttons
+    document.body.addEventListener('click', (e) => {
+      const t = e.target.closest('[data-track], [data-invoice-view], [data-invoice-pdf], [data-invoice-print], [data-cancel], [data-received], [data-retry-notif]');
+      if (!t) return;
+
+      if (t.hasAttribute('data-track')) {
+        const id = t.getAttribute('data-track');
+        document.getElementById('trackInput').value = id;
+        UI.showSection('tracking');
+        UI.renderTracking(id);
+      } else if (t.hasAttribute('data-invoice-view')) {
+        InvoiceManager.viewInvoice(t.getAttribute('data-invoice-view'));
+      } else if (t.hasAttribute('data-invoice-pdf')) {
+        InvoiceManager.downloadInvoicePDF(t.getAttribute('data-invoice-pdf'));
+      } else if (t.hasAttribute('data-invoice-print')) {
+        InvoiceManager.printInvoice(t.getAttribute('data-invoice-print'));
+      } else if (t.hasAttribute('data-cancel')) {
+        FormHandler.showCancelModal(t.getAttribute('data-cancel'));
+      } else if (t.hasAttribute('data-received')) {
+        FormHandler.showReceivedModal(t.getAttribute('data-received'));
+      } else if (t.hasAttribute('data-retry-notif')) {
+        NotificationService.retryNotification(t.getAttribute('data-retry-notif'));
+      }
+    });
+
+    // Confirm screen action buttons
+    document.getElementById('confirmViewInvoice').addEventListener('click', (e) => {
+      const id = e.target.dataset.orderId;
+      if (id) InvoiceManager.viewInvoice(id);
+    });
+    document.getElementById('confirmDownloadInvoice').addEventListener('click', (e) => {
+      const id = e.target.dataset.orderId;
+      if (id) InvoiceManager.downloadInvoicePDF(id);
+    });
+
+    // Storage availability check
+    if (!Storage.isAvailable()) {
+      UI.toast('LocalStorage is not available. Orders cannot be saved on this browser.', 'error');
+    }
+
+    // Render limitations
+    UI.renderLimitations();
+
+    // Initial render
+    UI.renderOrders();
+    InvoiceManager.renderInvoiceList();
+
+    // Set initial view — only home visible
+    this.showInitialView();
+
+    // Escape key closes modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') UI.closeModal();
+    });
+
+    // Print CSS for invoice
+    const style = document.createElement('style');
+    style.textContent = `
+      @media print {
+        body * { visibility: hidden; }
+        #invoice-print-area, #invoice-print-area * { visibility: visible; }
+        #invoice-print-area { position: absolute !important; left: 0 !important; top: 0 !important; width: 100% !important; }
+      }
+    `;
+    document.head.appendChild(style);
+  },
+  showInitialView() {
+    // Hide all sections except home on initial load
+    const sections = document.querySelectorAll('main > section');
+    sections.forEach(s => {
+      if (s.id !== 'home') {
+        s.classList.add('hidden');
+      }
+    });
+    document.getElementById('home').classList.remove('hidden');
+  }
+};
+
+// Boot
+document.addEventListener('DOMContentLoaded', () => App.init());
+</script>
+</body>
+</html>
